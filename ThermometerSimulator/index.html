@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ThermometerSimulator</title>
+    <style>
+        :root {
+            --primary: #e11d48;
+            --primary-glow: rgba(225, 29, 72, 0.3);
+            --accent: #38bdf8;
+            --bg-page: #0b1120;
+            --card-bg: #131d31;
+            --card-border: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-highlight: #334155;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Banner & Floating Icon Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            background: #0f172a;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 380px;
+        }
+
+        .header-content {
+            position: relative;
+            padding: 0 40px 30px 40px;
+        }
+
+        .icon-floating {
+            position: relative;
+            margin-top: -60px;
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
+            background: #0f172a;
+            display: block;
+        }
+
+        .title-section {
+            margin-top: 20px;
+        }
+
+        .badge-offline {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            color: var(--text-main);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-body {
+            padding: 10px 40px 40px 40px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-highlight);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Disclaimer Card */
+        .disclaimer-card {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-left: 6px solid var(--danger);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 28px 0;
+        }
+
+        .disclaimer-card h3 {
+            color: #f87171;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .disclaimer-card p {
+            color: #fca5a5;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Feature / Spec Highlights */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .spec-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-highlight);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .spec-box h4 {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .spec-box p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-highlight);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 6px;
+            }
+            .header-content {
+                padding: 0 20px 20px 20px;
+            }
+            .content-body {
+                padding: 10px 20px 30px 20px;
+            }
+            .icon-floating {
+                width: 80px;
+                height: 80px;
+                margin-top: -40px;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header with Banner Graphic -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="ThermometerSimulator Banner" class="banner-img">
+    </div>
+
+    <!-- Header Section with Floating Logo -->
+    <div class="header-content">
+        <img src="icon_512.png" alt="ThermometerSimulator App Icon" class="icon-floating">
+        <div class="title-section">
+            <span class="badge-offline">Zero Permissions • 100% Offline</span>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">ThermometerSimulator (Package: <code>com.datafaiq.thermometersimulator</code>) • Effective Date: October 2026</p>
+        </div>
+    </div>
+
+    <!-- Content Body -->
+    <div class="content-body">
+        <!-- Prominent Medical Disclaimer -->
+        <div class="disclaimer-card">
+            <h3>⚠️ Important Medical & Simulation Notice</h3>
+            <p>
+                <strong>ThermometerSimulator</strong> is strictly an entertainment and casual visual simulation application. It is NOT a medical device, clinical diagnostic tool, or physical temperature sensor. Consumer smartphones lack the certified hardware sensors necessary to measure human body temperature. Never rely on this application for medical diagnosis, clinical evaluations, fever assessment, or health decisions. Always consult a licensed physician and utilize a medically certified thermometer for clinical thermal readings.
+            </p>
+        </div>
+
+        <h2>1. Overview & Commitment</h2>
+        <p>
+            At <strong>DataFaiq</strong>, we respect and prioritize your personal privacy. We built <strong>ThermometerSimulator</strong> as a self-contained, offline visual entertainment utility. This Privacy Policy explicitly details that our application collects no personal information, requires no invasive system permissions, and maintains no remote telemetry servers.
+        </p>
+
+        <div class="spec-grid">
+            <div class="spec-box">
+                <h4>🔒 No Data Collection</h4>
+                <p>We do not collect, store, transmit, or monetize any user data whatsoever.</p>
+            </div>
+            <div class="spec-box">
+                <h4>📶 100% Offline App</h4>
+                <p>Fully functional without internet or network connectivity.</p>
+            </div>
+            <div class="spec-box">
+                <h4>🛡️ Zero Permissions</h4>
+                <p>No access to sensors, storage, contacts, camera, or device ID.</p>
+            </div>
+            <div class="spec-box">
+                <h4>👶 COPPA Compliant</h4>
+                <p>Completely safe and appropriate for users of all ages, including children.</p>
+            </div>
+        </div>
+
+        <h2>2. Zero Personal & Health Data Collection</h2>
+        <p>
+            ThermometerSimulator does not gather or track any personal or sensitive user information. Specifically:
+        </p>
+        <ul>
+            <li><strong>No Health or Biometric Information:</strong> The app does not read, record, or sync any biological, medical, or physiological health data.</li>
+            <li><strong>No Personally Identifiable Information (PII):</strong> We do not ask for or collect names, email addresses, phone numbers, or account logins.</li>
+            <li><strong>No Location Data:</strong> The app does not access GPS, Wi-Fi location, or IP-based geolocation.</li>
+            <li><strong>No Identifiers:</strong> We do not log Android Advertising IDs (AAID), IMEI numbers, MAC addresses, or unique device tokens.</li>
+        </ul>
+
+        <h2>3. Zero Device Permissions</h2>
+        <p>
+            ThermometerSimulator requests zero sensitive runtime permissions in the Android operating system. The application functions entirely through standard Flutter user interface rendering:
+        </p>
+        <ul>
+            <li>No Camera or Microphone access.</li>
+            <li>No Location or Bluetooth access.</li>
+            <li>No Body Sensors or Physical Activity access.</li>
+            <li>No Read/Write External Storage access.</li>
+        </ul>
+
+        <h2>4. No Third-Party SDKs or Advertising Networks</h2>
+        <p>
+            ThermometerSimulator does not embed any third-party analytics trackers, advertising software development kits (SDKs), or user tracking beacons (such as Google Analytics, Firebase, Facebook SDK, or AdMob). The application is 100% ad-free and tracker-free.
+        </p>
+
+        <h2>5. Children's Privacy (COPPA Compliance)</h2>
+        <p>
+            Because ThermometerSimulator does not collect any personally identifiable information from any user, it fully complies with the United States <strong>Children’s Online Privacy Protection Act (COPPA)</strong> and global child privacy regulations (including GDPR-K). Children can safely enjoy the interactive fluid physics and gauge demonstrations without privacy risk.
+        </p>
+
+        <h2>6. Security of Your Device</h2>
+        <p>
+            All user preference toggles (such as sound mute, haptics, and temperature scale selection) are held transiently in application memory during your active session. No persistent remote logs or user profiles are ever created or maintained.
+        </p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>
+            We may periodically update this policy to reflect any regulatory changes. Any modifications will be posted to this page with an updated effective date.
+        </p>
+
+        <h2>8. Contact Information</h2>
+        <p>
+            If you have questions, inquiries, or feedback regarding this Privacy Policy or ThermometerSimulator, please contact the developer:
+        </p>
+        <ul>
+            <li><strong>Developer:</strong> DataFaiq Developer Team</li>
+            <li><strong>Email:</strong> <code>datafaiq.apps@gmail.com</code></li>
+            <li><strong>GitHub Repository:</strong> <code>https://altafmalikryk.github.io/app-policies/ThermometerSimulator/</code></li>
+        </ul>
+
+        <footer>
+            <p>&copy; 2026 DataFaiq • ThermometerSimulator • All Rights Reserved</p>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>

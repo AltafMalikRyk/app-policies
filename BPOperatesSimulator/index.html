@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BPOperatesSimulator</title>
+    <style>
+        :root {
+            --primary: #00b4d8;
+            --primary-dark: #0077b6;
+            --secondary: #ff385c;
+            --accent: #00d2d3;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --warning-bg: #fff1f2;
+            --warning-border: #fecdd3;
+            --warning-text: #be123c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 30px 16px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        /* Banner & Header Layout */
+        .banner-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            background: #0f172a;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-content {
+            position: relative;
+            padding: 0 40px 30px 40px;
+            margin-top: -60px;
+        }
+
+        .logo-floating {
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+            border: 4px solid #ffffff;
+            background: #0f172a;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .badge-warning {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .badge-success {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        h1 {
+            color: #0f172a;
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        /* Content Area */
+        .content-body {
+            padding: 0 40px 40px 40px;
+        }
+
+        .disclaimer-box {
+            background: var(--warning-bg);
+            border: 2px solid var(--warning-border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+            color: var(--warning-text);
+        }
+
+        .disclaimer-box h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 24px 0;
+            color: #166534;
+        }
+
+        h2 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-bottom: 18px;
+        }
+
+        li {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: #1e293b;
+        }
+
+        .contact-card {
+            background: #f1f5f9;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 36px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .contact-card h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 8px;
+            }
+            .header-content {
+                padding: 0 20px 20px 20px;
+            }
+            .content-body {
+                padding: 0 20px 30px 20px;
+            }
+            .banner-wrapper {
+                height: 180px;
+            }
+            .logo-floating {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner Layout -->
+    <div class="banner-wrapper">
+        <img src="feature_graphic.png" alt="BPOperatesSimulator Banner" class="banner-img" onerror="this.style.display='none'">
+    </div>
+
+    <div class="header-content">
+        <img src="icon_512.png" alt="BPOperatesSimulator Icon" class="logo-floating">
+        
+        <div class="badges-row">
+            <span class="badge badge-warning">⚠️ Non-Medical Simulation</span>
+            <span class="badge badge-success">✓ Zero Permissions</span>
+            <span class="badge">100% Offline Standalone</span>
+            <span class="badge">Google Play Compliant</span>
+        </div>
+
+        <h1>Privacy Policy for BPOperatesSimulator</h1>
+        <div class="meta-info">Effective Date: October 13, 2026 | Application Version: 1.0.0</div>
+    </div>
+
+    <div class="content-body">
+        <!-- Prominent Non-Medical Entertainment Disclaimer -->
+        <div class="disclaimer-box">
+            <h3>⚠️ Critical Non-Medical Entertainment Disclaimer</h3>
+            <p style="color: inherit; margin-bottom: 0;">
+                <strong>BPOperatesSimulator is strictly and exclusively an entertainment and roleplay simulation.</strong> 
+                This application <strong>CANNOT and DOES NOT</strong> measure real blood pressure, heart rate, pulse, or human physiological health parameters. 
+                Smartphones do not have medical pressure bladders, arterial transducers, or sphygmomanometer sensors. 
+                Never use this simulation for medical evaluations, health monitoring, diagnosis, or clinical decisions. 
+                Always consult licensed healthcare practitioners and clinical medical equipment for genuine medical care.
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Privacy Summary:</strong> BPOperatesSimulator is engineered with an absolute zero-data architecture. It does NOT collect, store, transmit, or share any personal data, health data, identifiers, or location data. It requires ZERO sensitive device permissions.
+        </div>
+
+        <section>
+            <h2>1. Purpose and Entertainment Scope</h2>
+            <p>
+                <strong>BPOperatesSimulator</strong> is designed purely as an interactive mechanical simulation of a classic manual blood pressure cuff (sphygmomanometer) and aneroid dial gauge. 
+                Users can tap the virtual rubber bulb to simulate inflation, open the rotary air valve to trigger air hissing sounds, watch needle deflection physics, and listen to simulated Korotkoff sounds. 
+                The software is built solely for casual roleplay, fun interactivity, stress relief, and educational illustration of manual medical instruments.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Zero Personal and Health Data Collection</h2>
+            <p>
+                <strong>BPOperatesSimulator does not collect, record, process, store, transmit, or monetize any personal or health information whatsoever:</strong>
+            </p>
+            <ul>
+                <li><strong>No Health or Biometric Data:</strong> The application does not collect, measure, or access heart rate, pulse, blood pressure, oxygen saturation, body temperature, or medical history.</li>
+                <li><strong>No Personally Identifiable Information (PII):</strong> We do not request, access, or store your name, email address, physical address, phone numbers, contact books, or user accounts.</li>
+                <li><strong>No Unique Device Identifiers:</strong> We do not gather hardware MAC addresses, IMEI codes, Android Advertising IDs (AAID), or device serial numbers.</li>
+                <li><strong>No Precise or Coarse Location:</strong> The application does not request GPS, Wi-Fi, or cellular network geographical location data.</li>
+                <li><strong>No Storage or Media Access:</strong> The application does not access internal device storage, external SD cards, photos, videos, or camera sensors.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Zero Runtime Permissions &amp; 100% Offline Architecture</h2>
+            <p>
+                BPOperatesSimulator is engineered as a completely self-contained, standalone offline application:
+            </p>
+            <ul>
+                <li><strong>Zero Runtime Permissions:</strong> No dangerous or sensitive Android permissions are declared in the application manifest or requested at runtime (No Camera, Microphone, Body Sensors, Storage, Location, or Contacts).</li>
+                <li><strong>100% Offline Execution:</strong> All procedural dial physics, acoustic waveforms, and user interface components are bundled directly inside the APK/AAB package. No network connectivity or active data plan is required to use the simulator.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. No Third-Party Tracking, Telemetry, or Advertisements</h2>
+            <p>
+                BPOperatesSimulator contains <strong>ZERO third-party advertising SDKs, behavioral analytics trackers, or cloud telemetry tools</strong>:
+            </p>
+            <ul>
+                <li>We do not partner with ad networks or data brokers.</li>
+                <li>We do not record usage logs, screen time, session analytics, or crash telemetry to external servers.</li>
+                <li>We never sell, rent, disclose, or trade user data to third parties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Child Safety &amp; COPPA Compliance</h2>
+            <p>
+                BPOperatesSimulator complies with the Google Play Families Policy and the Children’s Online Privacy Protection Act (COPPA). 
+                Because the app collects zero personal data, features zero advertisements, requires zero runtime permissions, and depicts a harmless educational instrument simulation, it is completely safe for all audiences, including young children and families.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Data Security &amp; Android Sandbox Protection</h2>
+            <p>
+                Because BPOperatesSimulator operates 100% locally on your device without communicating with external web servers, there is zero exposure to remote database breaches, interception, or unauthorized cloud access. The app executes strictly within Android's hardened application sandbox.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Amendments to this Privacy Policy</h2>
+            <p>
+                We may periodically revise this Privacy Policy to ensure continued compliance with Google Play Developer Program Policies. Any revisions will be published immediately to this URL with a revised effective date.
+            </p>
+        </section>
+
+        <div class="contact-card">
+            <h3>8. Developer Contact Information</h3>
+            <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or BPOperatesSimulator, please contact the developer at:</p>
+            <p><strong>Support Email:</strong> <a href="mailto:bpopratessimulator.support@gmail.com" style="color: var(--primary-dark); font-weight: 600;">bpopratessimulator.support@gmail.com</a></p>
+        </div>
+
+        <footer>
+            &copy; 2026 BPOperatesSimulator. All rights reserved. Self-contained entertainment simulation utility.
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
