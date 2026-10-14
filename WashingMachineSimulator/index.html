@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Washing Machine Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00e5ff;
+            --primary-dark: #0284c7;
+            --secondary: #0ea5e9;
+            --accent: #38bdf8;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f0f9ff;
+            --card-bg: #ffffff;
+            --border: #e0f2fe;
+            --card-shadow: 0 20px 40px -15px rgba(2, 132, 199, 0.12), 0 0 1px 1px rgba(2, 132, 199, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #0a0f1d;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, rgba(10, 15, 29, 0.85), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -60px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 96px;
+            height: 96px;
+            border-radius: 18px;
+            display: block;
+            object-fit: cover;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+        h1 {
+            color: #0c4a6e;
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Body Content */
+        .content-body {
+            padding: 40px 44px 50px 44px;
+        }
+        .highlight-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 16px;
+            padding: 22px 26px;
+            margin-bottom: 36px;
+            color: #166534;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .highlight-box .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+        
+        section {
+            margin-bottom: 34px;
+        }
+        h2 {
+            color: #0369a1;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--primary-dark);
+            border-radius: 2px;
+        }
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-bottom: 16px;
+        }
+        li {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        li strong {
+            color: #1e293b;
+        }
+        
+        .contact-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px;
+            margin-top: 40px;
+            border-left: 6px solid var(--primary-dark);
+        }
+        .contact-card h3 {
+            color: #0c4a6e;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .contact-card a {
+            color: var(--primary-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+        
+        @media (max-width: 680px) {
+            .banner-container {
+                height: 200px;
+            }
+            .header-content {
+                padding: 0 24px 24px 24px;
+                margin-top: -45px;
+            }
+            .floating-logo {
+                width: 72px;
+                height: 72px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .content-body {
+                padding: 28px 24px 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="Washing Machine Simulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Floating Logo and Heading -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="Washing Machine Simulator Logo" class="floating-logo">
+        </div>
+        <div>
+            <span class="badge">Google Play Certified • Families &amp; Privacy Compliant</span>
+            <h1>Privacy Policy for Washing Machine Simulator</h1>
+            <div class="meta-info">Application Package: com.datafaiq.washingmachinesimulator &bull; Effective Date: October 14, 2026</div>
+        </div>
+    </div>
+
+    <!-- Body Content -->
+    <div class="content-body">
+        <div class="highlight-box">
+            <div class="icon">🛡️</div>
+            <div>
+                <strong>Privacy Commitment Summary:</strong> Washing Machine Simulator is a 100% offline casual entertainment and acoustic white noise simulation utility. It does NOT collect, store, log, transmit, or share any personal data, location records, or device identifiers. It requires zero sensitive device permissions and contains zero tracking mechanisms.
+            </div>
+        </div>
+
+        <section>
+            <h2>1. Purpose and Scope of Application</h2>
+            <p><strong>Washing Machine Simulator</strong> is distributed exclusively as an offline casual entertainment and acoustic white noise utility. It allows users to enjoy realistic front-load laundry machine visual dynamics (such as rotating perforated drum baskets, soapy water slosh waves, and tumbling laundry items) alongside soothing ambient soundscapes designed for stress relief, study focus, and infant sleep aid. We are deeply committed to respecting and protecting user privacy.</p>
+        </section>
+
+        <section>
+            <h2>2. Entertainment and White Noise Disclaimer</h2>
+            <p>Washing Machine Simulator is created purely for entertainment, relaxation, and acoustic background sound simulation. While many individuals find rhythmic mechanical white noise beneficial for masking distracting environmental sounds, the application does not claim to diagnose, treat, cure, or prevent any medical sleep disorder or condition. Users should adjust audio volume to a safe and comfortable listening level.</p>
+        </section>
+
+        <section>
+            <h2>3. Zero Personal Data Collection</h2>
+            <p><strong>Washing Machine Simulator strictly collects NO personal or non-personal data from its users:</strong></p>
+            <ul>
+                <li><strong>No Personally Identifiable Information (PII):</strong> We do not request, access, collect, or store your name, email address, physical location, telephone number, user accounts, or contacts.</li>
+                <li><strong>No Hardware or Network Identifiers:</strong> We do not collect device IMEI numbers, MAC addresses, Android Advertising IDs (AAID), or IP addresses.</li>
+                <li><strong>No Geographic Location Access:</strong> The application does not request or track precise GPS coordinates or coarse cellular/Wi-Fi location data.</li>
+                <li><strong>No Media, Camera, or File Access:</strong> The app has zero access to your photos, media library, internal storage, microphone, or camera.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Zero Runtime Permissions &amp; 100% Offline Architecture</h2>
+            <p>The application is engineered as a self-contained, offline Android application:</p>
+            <ul>
+                <li><strong>Zero Sensitive Permissions:</strong> No runtime permissions are requested or declared in the Android manifest. The app operates safely within the standard Android application sandbox without needing elevated system access.</li>
+                <li><strong>100% Standalone Operation:</strong> All graphic assets, procedural wave shaders, audio loops, and simulation mechanics are bundled directly inside the local application package (.apk/.aab). An active internet connection or cellular data connection is not required to operate the simulator.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Third-Party Services, SDKs &amp; Telemetry</h2>
+            <p>Washing Machine Simulator incorporates <strong>NO third-party advertising SDKs, behavioral analytics trackers, or remote telemetry frameworks</strong>. We do not partner with data brokers, advertising networks, or analytics providers. No information is transmitted to external servers or cloud repositories.</p>
+        </section>
+
+        <section>
+            <h2>6. Children's Online Privacy &amp; Family Safety (COPPA Compliance)</h2>
+            <p>Washing Machine Simulator complies fully with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and Google Play's Families Policy requirements. Because our app contains zero advertisements, collects zero personal information, requires zero device permissions, and features harmless visual simulations suitable for all age groups, it is completely safe and appropriate for children and families.</p>
+        </section>
+
+        <section>
+            <h2>7. Security and Sandboxing</h2>
+            <p>Because the app functions strictly offline and does not transmit data over the internet, your device is fully protected from data eavesdropping, man-in-the-middle attacks, and remote data breaches. All settings and preferences are stored locally in private application sandbox storage and are completely erased if the user uninstalls the application.</p>
+        </section>
+
+        <section>
+            <h2>8. Policy Modifications and Updates</h2>
+            <p>We reserve the right to update this Privacy Policy from time to time to maintain ongoing alignment with Google Play Developer Program policies and relevant data protection laws. Any updates will be published directly to this public URL with an updated effective date.</p>
+        </section>
+
+        <div class="contact-card">
+            <h3>9. Developer Contact Information</h3>
+            <p>If you have any questions, suggestions, or inquiries regarding this Privacy Policy or the Washing Machine Simulator application, please contact our support team:</p>
+            <p><strong>Support Email:</strong> <a href="mailto:washingmachinesimulator.app@gmail.com">washingmachinesimulator.app@gmail.com</a></p>
+        </div>
+
+        <footer>
+            &copy; 2026 Washing Machine Simulator. All rights reserved. Self-contained offline entertainment simulation utility.
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
