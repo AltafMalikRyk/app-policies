@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Fish Aquarium Simulator</title>
+    <style>
+        :root {
+            --primary: #00bcd4;
+            --primary-dark: #00838f;
+            --primary-light: #e0f7fa;
+            --accent: #ff6d00;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f0f9ff;
+            --card-bg: #ffffff;
+            --border: #e0f2fe;
+            --ocean-dark: #061826;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0 0 50px 0;
+        }
+
+        .hero-banner {
+            width: 100%;
+            max-height: 380px;
+            overflow: hidden;
+            background: var(--ocean-dark);
+            position: relative;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: -60px auto 0 auto;
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -15px rgba(0, 131, 143, 0.15), 0 0 1px 1px var(--border);
+            padding: 40px 48px;
+            z-index: 10;
+        }
+
+        .header-identity {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-bottom: 28px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 28px;
+        }
+
+        .floating-logo {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3);
+            border: 3px solid #ffffff;
+            flex-shrink: 0;
+            object-fit: cover;
+            background: #ffffff;
+        }
+
+        .header-text h1 {
+            color: var(--ocean-dark);
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .header-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .badge-verified {
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-families {
+            background: #ecfdf5;
+            color: #047857;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .effective-date {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #e0f7fa 0%, #e1f5fe 100%);
+            border: 1px solid #b2ebf2;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 34px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .summary-card .icon {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .summary-card p {
+            color: #006064;
+            font-size: 0.98rem;
+            font-weight: 500;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--ocean-dark);
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 14px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .contact-box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 36px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .contact-box h3 {
+            color: var(--ocean-dark);
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        .contact-box a {
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: #94a3b8;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 28px 20px;
+                margin-top: -30px;
+                border-radius: 16px;
+            }
+
+            .header-identity {
+                flex-direction: column;
+                text-align: center;
+                gap: 14px;
+            }
+
+            .header-meta {
+                justify-content: center;
+            }
+
+            .header-text h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-banner">
+    <img src="feature_graphic.png" alt="Fish Aquarium Simulator Banner">
+</div>
+
+<div class="container">
+    <header class="header-identity">
+        <img src="icon_512.png" alt="Fish Aquarium Simulator Logo" class="floating-logo">
+        <div class="header-text">
+            <h1>Privacy Policy</h1>
+            <div class="header-meta">
+                <span class="badge-verified">Google Play Compliant</span>
+                <span class="badge-families">Certified Family Safe</span>
+                <span class="effective-date">Effective Date: October 14, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="summary-card">
+        <div class="icon">🛡️</div>
+        <div>
+            <p><strong>Privacy at a Glance:</strong> Fish Aquarium Simulator is an offline casual entertainment and relaxation app. It does NOT collect, store, transmit, log, or sell any personal data, identifiers, or location information. It requires zero sensitive device permissions.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>1. Purpose and Scope</h2>
+        <p><strong>Fish Aquarium Simulator</strong> is developed purely as an offline virtual entertainment, stress relief, and acoustic relaxation simulator. The application allows users to observe colorful swimming tropical fish, interact by dropping floating food flakes, enjoy expanding water ripples, customize ambient lighting, and listen to soothing underwater bubbling soundscapes. We are firmly committed to user privacy and digital safety.</p>
+    </section>
+
+    <section>
+        <h2>2. Zero Personal Data Collection</h2>
+        <p><strong>Fish Aquarium Simulator does not collect, record, process, retain, or transmit any personal information whatsoever:</strong></p>
+        <ul>
+            <li><strong>No Personally Identifiable Information (PII):</strong> We never ask for, collect, or store your name, email address, physical address, phone numbers, or contacts.</li>
+            <li><strong>No Device Identifiers:</strong> We do not capture or access hardware serial numbers, IMEI codes, Android Advertising IDs (AAID), MAC addresses, or network IP addresses.</li>
+            <li><strong>No Location Data:</strong> The application has no location tracking features and does not access GPS or network-derived coordinates.</li>
+            <li><strong>No Media or File Access:</strong> The application does not read or write to user photo libraries, documents, camera, microphone, or external storage.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Zero Runtime Permissions & 100% Offline Architecture</h2>
+        <p>Fish Aquarium Simulator has been purposely engineered as a fully self-contained offline application:</p>
+        <ul>
+            <li><strong>Zero Sensitive Permissions:</strong> No runtime or sensitive Android permissions are declared in the manifest or requested during usage (No Camera, No Microphone, No Location, No Storage, No Contacts).</li>
+            <li><strong>Completely Offline Operation:</strong> All fish simulation models, fluid animations, water ripples, caustics, and acoustic sound loops are stored directly within the application package. No internet connectivity or mobile cellular data is required to use the simulator.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. No Third-Party Analytics, Tracking, or Advertising</h2>
+        <p>Fish Aquarium Simulator contains <strong>NO third-party advertising networks, analytics trackers, or user profiling SDKs</strong>. We do not integrate tracking libraries or cloud telemetry tools. We will never sell, rent, monetize, or distribute user metrics to third-party data brokers or marketing firms.</p>
+    </section>
+
+    <section>
+        <h2>5. Children's Online Privacy Protection (COPPA) & Google Play Families Policy</h2>
+        <p>Fish Aquarium Simulator is designed to provide safe, wholesome casual entertainment for audiences of all ages, including children and families. Because the application collects zero data, contains zero advertising, requires zero device permissions, and features gentle marine simulation, it is fully compliant with the Children's Online Privacy Protection Act (COPPA) and Google Play Families Policy requirements.</p>
+    </section>
+
+    <section>
+        <h2>6. Security and Sandboxed Execution</h2>
+        <p>Because Fish Aquarium Simulator runs completely offline within Android's protected application sandbox without communicating with any external servers, your device remains private and secure. There is zero risk of data interception, remote tampering, or external leakage.</p>
+    </section>
+
+    <section>
+        <h2>7. Policy Updates</h2>
+        <p>We may periodically update this Privacy Policy to maintain conformity with evolving Google Play Store guidelines. The latest version will always remain publicly available at this URL with an updated effective date.</p>
+    </section>
+
+    <div class="contact-box">
+        <h3>8. Developer Contact Information</h3>
+        <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or the Fish Aquarium Simulator application, please contact our support team at:</p>
+        <p style="margin-top: 8px;"><strong>Support Email:</strong> <a href="mailto:datafaiq.apps@gmail.com">datafaiq.apps@gmail.com</a></p>
+    </div>
+
+    <footer>
+        &copy; 2026 Fish Aquarium Simulator. All rights reserved. Completely offline entertainment & relaxation utility.
+    </footer>
+</div>
+
+</body>
+</html>
