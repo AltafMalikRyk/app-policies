@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MagnetSimulator</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-light: #38bdf8;
+            --primary-dark: #0369a1;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --bg-page: #0b0f19;
+            --card-bg: #111827;
+            --card-inner: #1f2937;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #374151;
+            --border-glow: rgba(56, 189, 248, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--border-glow);
+            overflow: hidden;
+        }
+
+        .banner-container {
+            width: 100%;
+            height: auto;
+            max-height: 340px;
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-content {
+            padding: 0 40px 24px;
+            position: relative;
+        }
+
+        .logo-floating {
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.4);
+            margin-top: -55px;
+            position: relative;
+            z-index: 10;
+            background: #0b0f19;
+            display: block;
+        }
+
+        .header-text {
+            margin-top: 16px;
+        }
+
+        .badge-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-cyan {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .badge-green {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #ffffff 40%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+        }
+
+        .main-content {
+            padding: 0 40px 48px;
+        }
+
+        .summary-card {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+
+        .summary-title {
+            color: #38bdf8;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin: 32px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--card-inner);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #d1d5db;
+            font-size: 0.98rem;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #d1d5db;
+        }
+
+        li strong {
+            color: #ffffff;
+        }
+
+        .contact-card {
+            background: var(--card-inner);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 40px;
+            border-left: 5px solid var(--primary-light);
+        }
+
+        .contact-card h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        .email-link {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dashed #38bdf8;
+            transition: color 0.2s;
+        }
+
+        .email-link:hover {
+            color: #7dd3fc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            background: #0a0e17;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 8px;
+            }
+            .header-content {
+                padding: 0 20px 20px;
+            }
+            .main-content {
+                padding: 0 20px 32px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .logo-floating {
+                width: 80px;
+                height: 80px;
+                border-radius: 18px;
+                margin-top: -40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Header Banner Image -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="MagnetSimulator Feature Graphic" class="banner-img">
+    </div>
+
+    <!-- Header Content with Overlapping Floating Logo -->
+    <div class="header-content">
+        <img src="icon_512.png" alt="MagnetSimulator Logo" class="logo-floating">
+        <div class="header-text">
+            <div class="badge-bar">
+                <span class="badge badge-cyan">Google Play Policy Compliant</span>
+                <span class="badge badge-green">100% Offline &amp; Zero Permissions</span>
+                <span class="badge badge-cyan">COPPA Certified</span>
+            </div>
+            <h1>Privacy Policy for MagnetSimulator</h1>
+            <div class="meta-info">
+                Effective Date: October 14, 2026 | Last Updated: October 14, 2026 | Application: MagnetSimulator (com.datafaiq.magnetsimulator)
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="summary-card">
+            <div class="summary-title">
+                🛡️ Direct Privacy Guarantee
+            </div>
+            <p style="margin-bottom: 0;">
+                <strong>MagnetSimulator</strong> is an entirely standalone, offline entertainment and physics simulation application. It does <strong>NOT collect, track, store, transmit, or share</strong> any personal data, device identifiers, or biometric information. It requests <strong>zero runtime permissions</strong> and operates without external network connections.
+            </p>
+        </div>
+
+        <section>
+            <h2>1. Entertainment &amp; Physics Simulation Scope</h2>
+            <p>
+                <strong>MagnetSimulator</strong> is developed strictly for casual entertainment, physics demonstrations, stress relief, and educational curiosity. The application simulates the tactile behavior of magnetic dipoles (North and South poles), interactive magnetic field vector flux lines, iron filings alignment dynamics, and metal sphere capture physics.
+            </p>
+            <p>
+                The magnetic forces simulated within the app are mathematical models computed purely through touch coordinates and visual rendering. The application does not require or interface with sensitive hardware magnetometers or internal compass sensors for its operation.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Zero Personal Data Collection</h2>
+            <p>
+                We believe that entertainment utilities should never compromise your digital privacy. <strong>MagnetSimulator does not gather or process any user data whatsoever:</strong>
+            </p>
+            <ul>
+                <li><strong>No Personally Identifiable Information (PII):</strong> We do not ask for, collect, or store your name, email address, home address, phone number, contacts, or billing records.</li>
+                <li><strong>No Device Identifiers:</strong> We do not log IMEI numbers, Android Advertising IDs (AAID), MAC addresses, IP addresses, or serial numbers.</li>
+                <li><strong>No Location Data:</strong> The application possesses no capability to read precise GPS coordinates or coarse network geolocation.</li>
+                <li><strong>No Media or File Access:</strong> The application does not access your camera, microphone, internal photo gallery, document storage, or external SD storage.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Zero Runtime Permissions &amp; Completely Offline Architecture</h2>
+            <p>
+                MagnetSimulator has been engineered to adhere to the highest standard of self-containment:
+            </p>
+            <ul>
+                <li><strong>Zero Android Permissions:</strong> The application manifest declares no dangerous, sensitive, or special access permissions. It does not request runtime permissions for camera, microphone, location, contacts, or storage.</li>
+                <li><strong>100% Offline Standalone Operation:</strong> All graphic assets, procedural physics algorithms, canvas renderers, and acoustic audio triggers are bundled directly inside the local application package. The application never makes outbound HTTP/HTTPS network requests, API calls, or cloud synchronizations.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. No Third-Party Tracking, Analytics, or Advertising</h2>
+            <p>
+                MagnetSimulator contains <strong>NO third-party software development kits (SDKs)</strong> for advertising networks, telemetry profiling, or behavioral analytics:
+            </p>
+            <ul>
+                <li>No banner ads, interstitial pop-ups, or rewarded video advertisements are shown.</li>
+                <li>No third-party analytics trackers (such as Google Firebase Analytics, Facebook Pixel, Adjust, or AppsFlyer) are included.</li>
+                <li>We never monetize, sell, lease, or distribute user metrics to data aggregators or marketing partners.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Children's Online Privacy Protection Act (COPPA) &amp; Families Compliance</h2>
+            <p>
+                MagnetSimulator is fully compliant with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:
+            </p>
+            <ul>
+                <li>The application does not collect any data from children under the age of 13 (or under the applicable age of digital consent in any jurisdiction).</li>
+                <li>The content consists solely of benign, harmless, and educational physics simulation suitable and safe for audiences of all age groups.</li>
+                <li>No external links, social logins, or chat capabilities are present within the simulation environment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Device Security &amp; Operating System Sandbox</h2>
+            <p>
+                MagnetSimulator executes strictly within the standard Android application sandbox. Because it does not exchange data with external web servers, there is zero risk of remote data interception, man-in-the-middle exploits, or cloud database breaches.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Updates to This Privacy Policy</h2>
+            <p>
+                We may periodically update this policy to reflect future software releases or updates in regulatory standards. Any changes will be published immediately to this URL with an updated effective date.
+            </p>
+        </section>
+
+        <div class="contact-card">
+            <h3>8. Developer Contact Information</h3>
+            <p>
+                If you have questions, feedback, or inquiries concerning this Privacy Policy or the MagnetSimulator application, please contact our developer support team at:
+            </p>
+            <p>
+                <strong>Developer Support:</strong>
+                <a href="mailto:magnetsimulator.support@gmail.com" class="email-link">magnetsimulator.support@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 MagnetSimulator. All rights reserved. Self-contained offline physics &amp; entertainment simulation.
+    </footer>
+</div>
+
+</body>
+</html>

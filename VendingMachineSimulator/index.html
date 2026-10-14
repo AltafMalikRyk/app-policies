@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Vending Machine Simulator</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4338ca;
+            --secondary: #ec4899;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --bg-page: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --badge-bg: rgba(99, 102, 241, 0.15);
+            --badge-border: rgba(99, 102, 241, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--card-border);
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #090d16;
+        }
+
+        .banner-container img.banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(30, 41, 59, 0.95) 100%);
+        }
+
+        .header-content {
+            position: relative;
+            padding: 0 40px 28px 40px;
+            margin-top: -65px;
+            display: flex;
+            align-items: flex-end;
+            gap: 24px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(99, 102, 241, 0.4);
+            flex-shrink: 0;
+            background: #111827;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-text {
+            flex-grow: 1;
+            padding-bottom: 6px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--badge-bg);
+            color: #a5b4fc;
+            border: 1px solid var(--badge-border);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .meta-date {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .summary-card {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .summary-card .icon-check {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--success);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .summary-card p {
+            color: #e2e8f0;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: #e2e8f0;
+        }
+
+        .contact-box {
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 36px;
+        }
+
+        .contact-box h3 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: #a5b4fc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-box a:hover {
+            color: #c7d2fe;
+            text-decoration: underline;
+        }
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 28px 40px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .banner-container {
+                height: 180px;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 24px 20px 24px;
+                margin-top: -50px;
+                gap: 14px;
+            }
+            .app-icon {
+                width: 90px;
+                height: 90px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 24px;
+            }
+            footer {
+                padding: 20px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="Vending Machine Simulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Info & Floating Icon -->
+    <div class="header-content">
+        <img src="icon_512.png" alt="Vending Machine Simulator Icon" class="app-icon">
+        <div class="header-text">
+            <span class="badge">Google Play Store Compliant • Families &amp; Child Safety Certified</span>
+            <h1>Privacy Policy</h1>
+            <div class="meta-date">Application: <strong>Vending Machine Simulator</strong> | Effective Date: October 14, 2026</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Quick Summary Box -->
+        <div class="summary-card">
+            <div class="icon-check">✓</div>
+            <p><strong>Privacy Commitment:</strong> Vending Machine Simulator is a 100% offline casual arcade simulation app. We strictly do NOT collect, store, transmit, monetize, or share any personal data, device identifiers, or location information. Zero runtime permissions are required.</p>
+        </div>
+
+        <!-- Section 1 -->
+        <section>
+            <h2><span class="section-num">1</span> Entertainment Simulation Disclaimer</h2>
+            <p><strong>Vending Machine Simulator</strong> is created and distributed strictly for entertainment, casual gaming, tactile simulation, and nostalgic fun. All snacks, beverages, coin slots, credits, keypads, and mechanical dispensing animations featured in the application are entirely virtual simulations. No physical goods, actual food products, or real refreshments are sold or delivered.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <h2><span class="section-num">2</span> Zero Payment &amp; Financial Tracking</h2>
+            <p>The application simulates the experience of inserting coins and dispensing treats using free, unlimited virtual tokens:</p>
+            <ul>
+                <li><strong>No Real-Money Transactions:</strong> The app does not include any real-money payment gateways, in-app purchases (IAP), credit card processing, digital wallets, or subscription plans.</li>
+                <li><strong>No Financial Data Collection:</strong> We never ask for, access, process, or store bank account numbers, credit/debit card numbers, billing addresses, or financial records.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2><span class="section-num">3</span> Zero Personal Data Collection</h2>
+            <p>We believe in absolute digital privacy. <strong>Vending Machine Simulator does not collect, record, process, or transmit any user data:</strong></p>
+            <ul>
+                <li><strong>No Personally Identifiable Information (PII):</strong> We do not ask for or collect names, email addresses, phone numbers, contacts, usernames, or physical locations.</li>
+                <li><strong>No Device Identifiers:</strong> We do not log IMEI numbers, hardware serials, MAC addresses, Android Advertising IDs (AAID), or IP addresses.</li>
+                <li><strong>No User Account or Registration:</strong> You can launch and enjoy the application instantly without creating accounts, logging in, or providing social profiles.</li>
+            </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+            <h2><span class="section-num">4</span> Zero Runtime Permissions &amp; Offline Architecture</h2>
+            <p>Vending Machine Simulator is engineered to run as an isolated, self-contained offline application:</p>
+            <ul>
+                <li><strong>Zero Runtime Permissions:</strong> The application does not request sensitive Android permissions. It does not access your Camera, Microphone, Storage/Photos, Location, Contacts, Calendar, or Phone State.</li>
+                <li><strong>100% Offline Functionality:</strong> All graphics, sound effects, vector illustrations, and physics animations are packaged within the application. No internet connection or mobile data plan is necessary to run the simulator.</li>
+            </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section>
+            <h2><span class="section-num">5</span> No Third-Party Tracking &amp; No Advertising</h2>
+            <p>Vending Machine Simulator does <strong>NOT</strong> incorporate any third-party behavioral trackers, telemetry frameworks, or advertising networks:</p>
+            <ul>
+                <li>No banner ads, interstitial popups, rewarded video ads, or native advertisements.</li>
+                <li>No analytics SDKs tracking user behavior, session times, or click maps.</li>
+                <li>We do not sell, rent, trade, or distribute user information to data brokers or marketing firms.</li>
+            </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section>
+            <h2><span class="section-num">6</span> Children's Privacy (COPPA &amp; Families Policy)</h2>
+            <p>Vending Machine Simulator is family-friendly and fully complies with the Children's Online Privacy Protection Act (COPPA) as well as the Google Play Families Policy. Because the application does not gather any personal data, contains no advertising, has no social features, and contains no external data collection endpoints, it provides a safe, welcoming, and worry-free entertainment environment for children, students, and families.</p>
+        </section>
+
+        <!-- Section 7 -->
+        <section>
+            <h2><span class="section-num">7</span> Security &amp; Data Safety</h2>
+            <p>Because Vending Machine Simulator does not transmit data over the internet or communicate with external cloud servers, there is no risk of remote data breaches, intercepted transmissions, or unauthorized server exposure. The app executes securely within Android's sandboxed runtime environment.</p>
+        </section>
+
+        <!-- Section 8 -->
+        <section>
+            <h2><span class="section-num">8</span> Changes to this Privacy Policy</h2>
+            <p>We may periodically update this Privacy Policy to ensure continued compliance with evolving Google Play Store developer guidelines or legal requirements. Any modifications will be posted directly to this URL with a revised effective date.</p>
+        </section>
+
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h3>Developer Support &amp; Inquiries</h3>
+            <p>If you have any questions, feedback, or suggestions regarding this Privacy Policy or the Vending Machine Simulator app, please reach out to us at:</p>
+            <p><strong>Support Email:</strong> <a href="mailto:vendingmachinesimulator.support@gmail.com">vendingmachinesimulator.support@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Vending Machine Simulator. All rights reserved. Self-contained entertainment simulation.
+    </footer>
+</div>
+
+</body>
+</html>
