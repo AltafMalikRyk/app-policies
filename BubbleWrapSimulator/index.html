@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BubbleWrapSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00b4d8;
+            --primary-dark: #0077b6;
+            --accent: #48cae4;
+            --accent-glow: rgba(0, 180, 216, 0.35);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f0f7fa;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 40px -15px rgba(0, 119, 182, 0.12), 0 0 1px 1px rgba(0, 119, 182, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #090e17;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(9, 14, 23, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 14px 32px rgba(0, 119, 182, 0.28);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 104px;
+            height: 104px;
+            border-radius: 22px;
+            display: block;
+            object-fit: cover;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e0f2fe;
+            color: #0284c7;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #0284c7;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.3rem;
+            color: #091a28;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+        .sub-header {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        /* Content Body */
+        .content {
+            padding: 40px 44px;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            border-left: 5px solid var(--primary);
+            padding: 22px 26px;
+            border-radius: 0 16px 16px 0;
+            margin-bottom: 36px;
+        }
+        .highlight-box h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .highlight-box p {
+            color: #1e3a5f;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+        
+        section {
+            margin-bottom: 34px;
+        }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            color: #091a28;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+        p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+        li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+        .card-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            border-top: 1px solid var(--border);
+            padding: 24px 44px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px 8px; }
+            .banner-container { height: 210px; }
+            .header-content { padding: 0 20px 24px 20px; margin-top: -46px; }
+            .floating-logo { width: 84px; height: 84px; }
+            h1 { font-size: 1.7rem; }
+            .content { padding: 26px 20px; }
+            .footer { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Banner Header -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="BubbleWrapSimulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Details -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="BubbleWrapSimulator Icon" class="floating-logo">
+        </div>
+        <div>
+            <div class="badge">
+                <span class="badge-dot"></span> 100% Offline • Zero Permissions • Family Safe
+            </div>
+            <h1>BubbleWrapSimulator Privacy Policy</h1>
+            <div class="sub-header">
+                <span><strong>App:</strong> BubbleWrapSimulator</span>
+                <span><strong>Package:</strong> com.datafaiq.bubblewrapsimulator</span>
+                <span><strong>Effective Date:</strong> October 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="highlight-box">
+            <h3>Our Core Privacy Commitment</h3>
+            <p><strong>BubbleWrapSimulator is a 100% standalone, offline sensory simulation and entertainment app.</strong> We do not collect, transmit, store, sell, or share any personal data, device identifiers, or usage telemetry. No account is required, and zero runtime device permissions are requested.</p>
+        </div>
+
+        <section>
+            <h2><span class="section-num">1</span> Entertainment & Sensory Utility Disclaimer</h2>
+            <p>BubbleWrapSimulator is designed strictly for casual entertainment, sensory decompression, stress relief, and tactile ASMR fidgeting. It emulates the interactive mechanics, crisp acoustics, and physical response of bursting packaging bubble wrap sheets. The app is intended purely for leisure, amusement, and sensory satisfaction.</p>
+        </section>
+
+        <section>
+            <h2><span class="section-num">2</span> Zero Personal Information Collection</h2>
+            <p>We respect your privacy unconditionally. BubbleWrapSimulator does not gather any identifiable or sensitive personal information whatsoever. Specifically, we do NOT collect:</p>
+            <ul>
+                <li>Names, email addresses, phone numbers, or physical addresses.</li>
+                <li>Device hardware IDs, advertising IDs, MAC addresses, or IP addresses.</li>
+                <li>Biometric data, sensor recordings, or touch pressure telemetry.</li>
+                <li>User keystrokes, clipboard content, or installed application lists.</li>
+                <li>Location data (neither GPS coarse nor fine location is accessible).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span class="section-num">3</span> Zero Sensitive or Runtime Device Permissions</h2>
+            <p>The application is designed to be completely self-contained. The Android Manifest requires <strong>ZERO sensitive or runtime permissions</strong>.</p>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-title">No Camera or Microphone</div>
+                    <p class="card-desc">No video or audio input is ever accessed or recorded.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">No Storage Access</div>
+                    <p class="card-desc">No access to your personal files, gallery, photos, or media.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">No Location Services</div>
+                    <p class="card-desc">Zero tracking of geographic coordinates or network localization.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">No Contacts or Accounts</div>
+                    <p class="card-desc">Zero access to personal address books, social accounts, or phone identity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="section-num">4</span> Tactile Haptic Vibration & Audio Playback</h2>
+            <p>To provide realistic sensory satisfaction, the application utilizes standard Android audio and haptic feedback capabilities:</p>
+            <ul>
+                <li><strong>Sound Effects:</strong> Crisp bubble rupture audio files are packaged directly within the application and played locally via native low-latency system audio APIs. No audio is ever captured, analyzed, or uploaded.</li>
+                <li><strong>Tactile Haptics:</strong> Gentle vibration pulses accompany each popped bubble to simulate physical plastic resistance. Haptic vibration is processed locally on the device and can be customized or fully disabled in the app settings at any time.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span class="section-num">5</span> No Third-Party Tracking or Advertising SDKs</h2>
+            <p>BubbleWrapSimulator does not embed any third-party analytics SDKs, behavioral telemetry tools, marketing trackers, or third-party ad networks. There are no background data transmissions, invisible pixels, or user profiling mechanisms.</p>
+        </section>
+
+        <section>
+            <h2><span class="section-num">6</span> Child Privacy (COPPA & GDPR-K Compliance)</h2>
+            <p>Because BubbleWrapSimulator does not collect any personal data from any user regardless of age, it fully complies with the Children's Online Privacy Protection Act (COPPA), GDPR-K, and Google Play Family Policy requirements. The app is completely safe, benign, and suitable for users of all ages, including children and families.</p>
+        </section>
+
+        <section>
+            <h2><span class="section-num">7</span> Local Application Preferences</h2>
+            <p>Any settings you adjust—such as pop sound volume, vibration intensity level, and bubble wrap color theme (Classic Clear, Neon Pink, Ocean Blue, Emerald Mint, Sunset Amber)—are saved strictly locally on your device hardware. This data never leaves your device and is wiped immediately if you uninstall the application or clear app storage.</p>
+        </section>
+
+        <section>
+            <h2><span class="section-num">8</span> Policy Updates</h2>
+            <p>If this Privacy Policy is updated in the future to reflect new regulatory requirements or app features, the revised date at the top of this document will be updated accordingly. Continued use of the application signifies acceptance of any updated terms.</p>
+        </section>
+
+        <section>
+            <h2><span class="section-num">9</span> Developer Contact</h2>
+            <p>If you have any questions, inquiries, or feedback regarding BubbleWrapSimulator or this Privacy Policy, please feel free to reach out to us at:</p>
+            <p><strong>Support & Developer Inquiries:</strong> <a href="mailto:datafaiq@gmail.com" style="color: var(--primary); font-weight: 600;">datafaiq@gmail.com</a></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 BubbleWrapSimulator. Pure Entertainment & ASMR Relaxation. All rights reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>
