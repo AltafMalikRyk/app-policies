@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Hand Warmer Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f97316;
+            --primary-dark: #ea580c;
+            --secondary: #fbbf24;
+            --accent: #fdba74;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #fdfaf6;
+            --card-bg: #ffffff;
+            --border: #fed7aa;
+            --card-shadow: 0 20px 45px -15px rgba(234, 88, 12, 0.15), 0 0 1px 1px rgba(234, 88, 12, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #0d0f14;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(13, 15, 20, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 26px;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 108px;
+            height: 108px;
+            border-radius: 20px;
+            display: block;
+            object-fit: cover;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff7ed;
+            color: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            border: 1px solid #ffedd5;
+        }
+        .badge svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .meta-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* Content Sections */
+        .content-body {
+            padding: 44px;
+        }
+        .section-block {
+            margin-bottom: 36px;
+        }
+        .section-block:last-child {
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 .section-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #fff7ed;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 14px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 14px;
+        }
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            color: #334155;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        
+        /* Highlight Callout Box */
+        .callout-box {
+            background: #fffaf5;
+            border-left: 4px solid var(--primary);
+            padding: 20px 24px;
+            border-radius: 0 16px 16px 0;
+            margin: 24px 0;
+            border-top: 1px solid #ffedd5;
+            border-right: 1px solid #ffedd5;
+            border-bottom: 1px solid #ffedd5;
+        }
+        .callout-box strong {
+            color: #9a3412;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+        .callout-box p {
+            margin-bottom: 0;
+            color: #7c2d12;
+            font-size: 0.95rem;
+        }
+
+        /* Disclaimer Card */
+        .disclaimer-card {
+            background: #fef2f2;
+            border: 1.5px solid #fecaca;
+            border-radius: 16px;
+            padding: 22px;
+            margin: 24px 0;
+        }
+        .disclaimer-card h3 {
+            color: #991b1b;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .disclaimer-card p {
+            color: #7f1d1d;
+            font-size: 0.93rem;
+            margin-bottom: 0;
+        }
+
+        /* Grid highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .highlight-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 18px;
+        }
+        .highlight-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .highlight-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        .policy-footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 28px 44px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+        .policy-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .policy-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 8px;
+            }
+            .header-content {
+                padding: 0 20px 24px 20px;
+                margin-top: -48px;
+            }
+            .floating-logo {
+                width: 80px;
+                height: 80px;
+            }
+            .content-body {
+                padding: 24px 20px;
+            }
+            .policy-footer {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .banner-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Graphic -->
+        <div class="banner-container">
+            <img src="feature_graphic.png" alt="Hand Warmer Simulator Banner" class="banner-img">
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Floating Logo & Title Section -->
+        <div class="header-content">
+            <div class="floating-logo-wrapper">
+                <img src="icon_512.png" alt="Hand Warmer Simulator Icon" class="floating-logo">
+            </div>
+            <div>
+                <span class="badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2v-2zm0-10h2v8h-2V6z"/></svg>
+                    Official Privacy & Safety Notice
+                </span>
+                <h1>Privacy Policy</h1>
+                <div class="meta-subtitle">
+                    <span class="meta-item"><strong>Application:</strong> Hand Warmer Simulator</span>
+                    <span class="meta-item"><strong>Package:</strong> com.datafaiq.handwarmersimulator</span>
+                    <span class="meta-item"><strong>Last Updated:</strong> October 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-body">
+            <!-- Safety Disclaimer -->
+            <div class="disclaimer-card">
+                <h3>⚠️ Visual Entertainment & Acoustic Disclaimer</h3>
+                <p>
+                    <strong>Hand Warmer Simulator is strictly an interactive visual simulation and relaxation audio application.</strong> It does NOT produce physical warmth or heat. The application does not intentionally overload device hardware, CPU cores, or batteries. It operates as a harmless visual display of heat mesh filaments and fireplace sounds.
+                </p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="section-block">
+                <h2><span class="section-icon">🛡️</span> Privacy Commitment</h2>
+                <p>
+                    We respect your right to privacy and are committed to complete transparency. Hand Warmer Simulator is built from the ground up as a fully self-contained, offline application. We believe digital entertainment should never come at the expense of your personal data.
+                </p>
+                <div class="callout-box">
+                    <strong>Zero Personal Data Collection Policy</strong>
+                    <p>
+                        Hand Warmer Simulator does NOT collect, harvest, transmit, store, sell, or share any personal identifiable information (PII) or device identifiers. Everything stays strictly on your local device.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Highlights Grid -->
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>🔒 100% Offline</h4>
+                    <p>Works completely without internet access or cellular connection. Safe in airplane mode.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>🚫 Zero Permissions</h4>
+                    <p>Does not request access to Camera, Microphone, Contacts, Storage, or GPS location.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>👶 COPPA Compliant</h4>
+                    <p>Safe and friendly for all family members and children. Zero data collection ensures child safety.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>⚡ Safe Execution</h4>
+                    <p>No battery-stressing loops or harmful hardware exploits. Designed to run smoothly and cool.</p>
+                </div>
+            </div>
+
+            <!-- Information We Collect -->
+            <div class="section-block">
+                <h2><span class="section-icon">📋</span> Information We Do NOT Collect</h2>
+                <p>To provide full transparency, we confirm that our app does NOT access or gather:</p>
+                <ul>
+                    <li><strong>Personal Details:</strong> Names, email addresses, phone numbers, or physical addresses.</li>
+                    <li><strong>Device Data:</strong> Precise GPS location, device serial numbers, MAC addresses, or IP history.</li>
+                    <li><strong>Sensitive Files:</strong> Photo galleries, media files, contact books, or local documents.</li>
+                    <li><strong>Audio/Video Feeds:</strong> Camera captures, microphone recordings, or biometric logs.</li>
+                </ul>
+            </div>
+
+            <!-- Zero Runtime Permissions -->
+            <div class="section-block">
+                <h2><span class="section-icon">🔑</span> Device Permissions</h2>
+                <p>
+                    Hand Warmer Simulator operates without requiring any sensitive or dangerous runtime permissions. The application utilizes standard Android framework components solely for:
+                </p>
+                <ul>
+                    <li><strong>Haptic Feedback:</strong> Minimal, brief vibration pulses triggered on user taps when enabled in settings.</li>
+                    <li><strong>Audio Playback:</strong> Local playback of pre-packaged soothing fireplace crackle and furnace hum audio files.</li>
+                </ul>
+            </div>
+
+            <!-- Third-Party Tracking -->
+            <div class="section-block">
+                <h2><span class="section-icon">🚫</span> No Third-Party Analytics or Tracking</h2>
+                <p>
+                    Hand Warmer Simulator does not include third-party advertising SDKs, behavioral tracking frameworks, or analytics services. We do not track user sessions, button clicks, screen visits, or app interaction durations.
+                </p>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div class="section-block">
+                <h2><span class="section-icon">🧸</span> Children's Privacy (COPPA Compliance)</h2>
+                <p>
+                    Protecting the privacy of young children is especially important. Hand Warmer Simulator is suitable for all ages and complies fully with the Children's Online Privacy Protection Act (COPPA). Because we do not collect any personal information whatsoever, parents and guardians can rest assured their children's privacy is completely safeguarded.
+                </p>
+            </div>
+
+            <!-- Changes to Policy -->
+            <div class="section-block">
+                <h2><span class="section-icon">🔄</span> Changes to This Privacy Policy</h2>
+                <p>
+                    We may occasionally update this Privacy Policy to reflect app enhancements or legal guidelines. Any updates will be posted to this page with an updated "Last Updated" date. We recommend checking periodically for any updates.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="section-block">
+                <h2><span class="section-icon">✉️</span> Contact Developer</h2>
+                <p>
+                    If you have questions, feedback, or inquiries regarding this Privacy Policy or Hand Warmer Simulator, please contact our developer support team:
+                </p>
+                <div class="callout-box">
+                    <strong>Developer Support Email</strong>
+                    <p>developer.datafaiq@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="policy-footer">
+            <p>© 2026 Hand Warmer Simulator • Built with pride for cozy winter relaxation • <a href="https://github.com/altafmalikryk/app-policies">GitHub Repository</a></p>
+        </div>
+    </div>
+</body>
+</html>

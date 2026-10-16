@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - StampSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c22b2b;
+            --primary-dark: #8b0e0e;
+            --secondary: #b45309;
+            --accent: #f87171;
+            --text-main: #18181b;
+            --text-muted: #52525b;
+            --bg-page: #fdfaf7;
+            --card-bg: #ffffff;
+            --border: #f1e7e0;
+            --card-shadow: 0 20px 45px -15px rgba(139, 14, 14, 0.12), 0 0 1px 1px rgba(139, 14, 14, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #1c110c;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 110px;
+            background: linear-gradient(to top, rgba(28, 17, 12, 0.9), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+            margin-bottom: 20px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+        }
+        .app-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: #fee2e2;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Body Content */
+        .content-body {
+            padding: 44px;
+        }
+        .section {
+            margin-bottom: 38px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 22px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #fff7ed;
+            border-left: 4px solid var(--secondary);
+            padding: 18px 22px;
+            border-radius: 0 14px 14px 0;
+            margin: 22px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #78350f;
+            font-weight: 500;
+        }
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .security-card {
+            background: #fdfaf7;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .security-card .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .security-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+        .security-card p {
+            font-size: 13.5px;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            padding: 30px 44px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .header-content { padding: 0 24px 24px 24px; margin-top: -48px; }
+            .floating-logo { width: 86px; height: 86px; }
+            .app-title { font-size: 28px; }
+            .content-body { padding: 28px 24px; }
+            .banner-container { height: 210px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="StampSimulator Feature Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Details with Floating Logo -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="StampSimulator Logo" class="floating-logo">
+        </div>
+        <div class="app-badge">✓ Offline Bureaucracy & Office Stamp Simulation</div>
+        <h1 class="app-title">Privacy Policy - StampSimulator</h1>
+        <div class="last-updated">Effective Date: October 2026 | Application: <strong>StampSimulator (com.datafaiq.stampsimulator)</strong></div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content-body">
+        <div class="highlight-box">
+            <p><strong>Quick Summary:</strong> StampSimulator is an offline, standalone casual entertainment simulation app. It collects <strong>zero</strong> personal data, requests <strong>zero</strong> runtime device permissions, uses no advertising or third-party tracking SDKs, and does not connect to external servers.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. Entertainment Simulation Disclaimer</h2>
+            <p><strong>StampSimulator</strong> is created exclusively for casual entertainment, office roleplay, stress relief, and satisfying tactile/audio ASMR simulation. All seals ("APPROVED", "REJECTED", "TOP SECRET", "PAID", "CONFIDENTIAL", "VERIFIED") and paper documents simulated inside the app are entirely fictional visual representations and hold no legal, financial, governmental, or official validity whatsoever.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Zero Data Collection Policy</h2>
+            <p>We believe in absolute user privacy. When you download and use StampSimulator:</p>
+            <ul>
+                <li><strong>No Personal Identifiable Information (PII):</strong> We do not ask for, gather, or store names, email addresses, phone numbers, or account details.</li>
+                <li><strong>No Location Data:</strong> The application does not access GPS, Wi-Fi location, or cellular network location.</li>
+                <li><strong>No Device Files or Media Access:</strong> The app never requests access to your photos, camera, microphone, internal files, or external storage.</li>
+                <li><strong>No Keystroke or Input Logging:</strong> Your virtual stamp positions and paper canvas drawings exist purely in temporary device memory (RAM) while the app is active and are completely erased upon reset or exit.</li>
+            </ul>
+        </div>
+
+        <div class="security-grid">
+            <div class="security-card">
+                <div class="icon">🔒</div>
+                <h4>100% Offline</h4>
+                <p>Functions completely without an active internet connection.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">🛡️</div>
+                <h4>Zero Permissions</h4>
+                <p>No camera, storage, microphone, or location permissions required.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">🚫</div>
+                <h4>No Tracking</h4>
+                <p>No third-party ad networks, analytics, or behavioral trackers.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">👶</div>
+                <h4>Family & Kid Safe</h4>
+                <p>Compliant with global child safety standards including COPPA.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. Zero Sensitive Device Permissions</h2>
+            <p>StampSimulator is architected to be completely self-contained. The application does not request nor utilize any Android runtime permissions:</p>
+            <ul>
+                <li><code>android.permission.CAMERA</code> - NOT REQUESTED</li>
+                <li><code>android.permission.RECORD_AUDIO</code> - NOT REQUESTED</li>
+                <li><code>android.permission.ACCESS_FINE_LOCATION</code> - NOT REQUESTED</li>
+                <li><code>android.permission.READ_EXTERNAL_STORAGE</code> - NOT REQUESTED</li>
+                <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code> - NOT REQUESTED</li>
+            </ul>
+            <p>Haptic vibration feedback utilizes standard Android non-sensitive hardware vibration APIs solely to provide satisfying tactile feedback when a stamp slams against the paper.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Third-Party Services and Analytics</h2>
+            <p>StampSimulator contains <strong>no</strong> third-party software development kits (SDKs) for advertising (such as Google AdMob, Unity Ads, or Meta Audience Network) and <strong>no</strong> analytics trackers (such as Firebase Analytics, Adjust, or AppsFlyer). Your activity remains strictly on your personal device.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. Children’s Online Privacy Protection (COPPA)</h2>
+            <p>Because StampSimulator does not collect, transmit, or share any personal information from any user, it fully complies with the Children’s Online Privacy Protection Act (COPPA) and international child privacy regulations. It is safe for audiences of all ages, including children under 13.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. Security and Data Retention</h2>
+            <p>Because no user data is collected or transmitted over any network, there is no transmission risk or server-side data retention. All interactive stamping states are volatile and reset when you clear the document or close the app.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">7. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy periodically to reflect app updates or regulatory adjustments. Any future modifications will be posted directly to this public webpage with an updated effective date.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">8. Contact Us</h2>
+            <p>If you have any questions or suggestions regarding this Privacy Policy or the StampSimulator application, please contact our support team at:</p>
+            <p><strong>Email:</strong> <a href="mailto:developer@datafaiq.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">developer@datafaiq.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 StampSimulator. All rights reserved. Designed purely for casual office simulation and entertainment.</p>
+    </div>
+</div>
+
+</body>
+</html>
