@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ClipperPrankSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --primary-light: #ffd700;
+            --primary-dark: #996515;
+            --secondary: #00e5ff;
+            --accent: #ff5252;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 45px -15px rgba(212, 175, 55, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 340px;
+            background: #0c0e14;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(12, 14, 20, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fefce8;
+            color: #854d0e;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid #fef08a;
+        }
+        .badge-safe {
+            background: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.03em;
+            margin-bottom: 6px;
+        }
+        .effective-date {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        /* Main Body Content */
+        .content {
+            padding: 44px;
+        }
+        
+        /* Prank Disclaimer Card */
+        .disclaimer-card {
+            background: #fffbeb;
+            border-left: 5px solid #f59e0b;
+            padding: 22px 24px;
+            border-radius: 14px;
+            margin-bottom: 36px;
+        }
+        .disclaimer-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+        .disclaimer-card p {
+            color: #78350f;
+            font-size: 0.96rem;
+            line-height: 1.65;
+        }
+
+        /* Section Layout */
+        .section {
+            margin-bottom: 34px;
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+        }
+        h2 .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: #f1f5f9;
+            color: #996515;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #059669;
+            font-weight: 800;
+        }
+        
+        /* Grid cards */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .grid-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .grid-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .grid-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 32px 44px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 640px) {
+            .header-content, .content, .footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .banner-container {
+                height: 220px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="ClipperPrankSimulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+    
+    <!-- Floating Logo and Heading -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="ClipperPrankSimulator Logo" class="floating-logo">
+        </div>
+        <div class="badge-row">
+            <div class="badge">Novelty Prank & Simulation</div>
+            <div class="badge badge-safe">100% Offline & Private</div>
+            <div class="badge badge-safe">Zero Permissions</div>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Application: <strong>ClipperPrankSimulator</strong> (Package: <code>com.datafaiq.clipperpranksimulator</code>) • Last Updated: October 2026</p>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content">
+        
+        <!-- Prank Disclaimer -->
+        <div class="disclaimer-card">
+            <div class="disclaimer-title">
+                <span>⚠️</span> Harmless Prank & Novelty Entertainment Disclaimer
+            </div>
+            <p>
+                <strong>ClipperPrankSimulator</strong> is designed exclusively for harmless novelty amusement, comedy, and friendly pranks. This application does NOT cut or shave real hair. All motor sounds, oscillating blade animations, and rhythmic phone vibrations are purely simulated software effects generated by your device for entertainment purposes only.
+            </p>
+        </div>
+        
+        <!-- Section 1 -->
+        <div class="section">
+            <h2><span class="section-number">1</span> Overview & Core Philosophy</h2>
+            <p>
+                We believe that entertainment utility applications should respect user privacy unconditionally. <strong>ClipperPrankSimulator</strong> is built from the ground up with a strict privacy-first, zero-telemetry architecture. You can enjoy the realistic electric trimmer soundboard and vibration prank without ever transmitting any personal data over the internet.
+            </p>
+        </div>
+        
+        <!-- Section 2 -->
+        <div class="section">
+            <h2><span class="section-number">2</span> Zero Data Collection Policy</h2>
+            <p>
+                We do not collect, process, log, or sell any personal information whatsoever. When you download, install, and open ClipperPrankSimulator:
+            </p>
+            <ul>
+                <li><strong>No Identifiable Data:</strong> We do not ask for or collect names, email addresses, phone numbers, or account logins.</li>
+                <li><strong>No Device Fingerprinting:</strong> We do not collect IMEI, MAC addresses, Android Advertising ID (AAID), or hardware serials.</li>
+                <li><strong>No Location Tracking:</strong> We never request GPS, cellular cell towers, Wi-Fi SSIDs, or geographic location data.</li>
+                <li><strong>No Biometric or Media Access:</strong> We do not access photos, media library, audio recording, or camera feeds.</li>
+            </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <h2><span class="section-number">3</span> Device Permissions (Zero Sensitive Permissions)</h2>
+            <p>
+                ClipperPrankSimulator does not require any runtime or sensitive device permissions. The only permission requested is standard and non-sensitive:
+            </p>
+            <div class="grid-cards">
+                <div class="grid-card">
+                    <h3>⚡ VIBRATE (Install-Time)</h3>
+                    <p>Allows the app to activate device haptic vibration motors in synchronization with the trimmer buzzing sound loop. No personal data is accessed or stored.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>🛡️ Zero Dangerous Permissions</h3>
+                    <p>No Camera, No Microphone, No Contacts, No Storage, and No Fine/Coarse Location permissions are declared or used.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <h2><span class="section-number">4</span> No Third-Party Trackers or Analytics</h2>
+            <p>
+                Unlike many commercial apps, ClipperPrankSimulator contains:
+            </p>
+            <ul>
+                <li>Zero advertising SDKs (No AdMob, Unity Ads, AppLovin, or IronSource).</li>
+                <li>Zero behavioral tracking SDKs (No Google Analytics, Firebase Analytics, Flurry, or AppsFlyer).</li>
+                <li>Zero third-party social networking login modules.</li>
+            </ul>
+            <p>
+                The app executes entirely client-side on your device without communicating with external analytics servers.
+            </p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section">
+            <h2><span class="section-number">5</span> Children's Online Privacy (COPPA Compliance)</h2>
+            <p>
+                ClipperPrankSimulator complies fully with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and global child privacy regulations. Because the app does not collect personal information from any user, it is entirely safe for children, families, and all age groups. If you are a parent or guardian, you can rest assured that no data is collected from your children while they enjoy this funny novelty simulator.
+            </p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section">
+            <h2><span class="section-number">6</span> Security & Local Storage</h2>
+            <p>
+                All user preferences (such as selected clipper theme, sound pitch frequency, and vibration toggle) are stored strictly locally in non-synchronized device memory. No external backup, cloud synchronization, or remote database interaction occurs.
+            </p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section">
+            <h2><span class="section-number">7</span> Changes to This Privacy Policy</h2>
+            <p>
+                We may periodically update this policy to reflect future updates or regulatory changes. Any modifications will be posted directly to this URL with an updated effective date. Continued use of the application after changes constitute acceptance of the updated policy.
+            </p>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section">
+            <h2><span class="section-number">8</span> Developer Contact Information</h2>
+            <p>
+                If you have any questions, feedback, or concerns regarding this Privacy Policy or the ClipperPrankSimulator application, please contact our development team at:
+            </p>
+            <div class="grid-card" style="max-width: 480px;">
+                <p><strong>App Developer:</strong> DataFaiq Mobile Apps</p>
+                <p><strong>Support Email:</strong> <a href="mailto:datafaiq.dev@gmail.com" style="color: #996515; font-weight: 700;">datafaiq.dev@gmail.com</a></p>
+                <p><strong>Repository & Policies:</strong> <a href="https://altafmalikryk.github.io/app-policies/ClipperPrankSimulator/index.html" style="color: #996515;">GitHub Pages Policy Center</a></p>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 ClipperPrankSimulator. All Rights Reserved. Pure Novelty Entertainment.</p>
+        <p style="margin-top: 6px; font-size: 0.8rem; color: #64748b;">Designed strictly for jokes, comedy & harmless barber soundboard simulation.</p>
+    </div>
+</div>
+
+</body>
+</html>
