@@ -1,0 +1,51 @@
+========================================================
+       PLAY STORE RELEASE METADATA & LISTING DETAILS
+========================================================
+App Name: DoorbellSimulator
+Package Name: com.datafaiq.doorbellsimulator
+Category: Entertainment Only / Casual Simulation
+Content Rating: Everyone / Family Safe
+
+--- STORE LISTING METADATA ---
+
+Short Description:
+Tap to ring realistic doorbells with crisp Ding-Dong chimes and haptics!
+
+Full Description:
+Experience the ultimate interactive doorbell and chime melody soundboard with DoorbellSimulator! Built with high-fidelity acoustic audio synthesis and tactile physics, DoorbellSimulator transforms your Android device into a hyper-realistic, luxury smart doorbell push-button. Whether you want to enjoy the satisfying tactile feel of a high-end architectural doorbell, train your dog to stay calm when visitors arrive, pull harmless friendly pranks on your family, or add crisp acoustic sound effects to skits and creative plays, DoorbellSimulator provides an authentic, high-definition audio simulation at your fingertips.
+
+Engineered with cutting-edge visual and acoustic attention to detail, DoorbellSimulator features a realistic wall-mounted doorbell chassis crafted in brushed titanium with corner mounting hardware, a wide-angle camera dome simulation, speaker grille perforations, and a responsive glowing LED halo ring that flares brilliantly when pressed. Tap or hold the central mechanical button to feel realistic spring resistance, hear an authentic mechanical switch click, trigger synchronized heavy haptic vibration impulses, and ring out multi-harmonic melodic chimes complete with spacious room reverberation.
+
+KEY FEATURES & SENSORY SIMULATION HIGHLIGHTS:
+
+1. Tactile Button Press Physics & Mechanical Feedback:
+Feel the realistic tactile push of an authentic smart home doorbell. Every press triggers dynamic physical scaling, deep inset shadows, an authentic mechanical spring click, and synchronized Android haptic feedback. The responsive glowing LED halo ring illuminates on contact and radiates expanding acoustic sound waves across your screen.
+
+2. Four Authentic & High-Fidelity Chime Melodies:
+Select from a curated collection of distinct, crystal-clear doorbell chime melodies recorded and synthesized at 44.1 kHz studio quality:
+- Classic Ding-Dong: The iconic two-tone tubular bell chime with a bright resonant strike and warm acoustic decay.
+- Westminster Chimes: The legendary four-phrase melodic clock tower melody beloved in traditional estate doorbells.
+- Cyber Intercom: A modern multi-pulse electronic buzzer tone characteristic of contemporary urban apartment intercoms.
+- Vintage Brass Bell: A rapid oscillating mechanical hammer striking a resonant brass dome for a retro novelty sound.
+
+3. Complete Acoustic Customization & LED Styling:
+Tailor the simulator to match your sensory preference:
+- Live Master Volume Slider: Seamlessly adjust the sound intensity from quiet indoor training cues to loud, room-filling doorbell rings.
+- LED Halo Ring Color Palette: Personalize the glowing illumination ring with vivid options including Electric Cyan, Amber Gold, Emerald Green, Neon Purple, and Coral Red.
+- Dedicated Toggles: Independently enable or disable tactile haptic vibration clicks and mechanical button switch clicks.
+- Quick Chime Selector & Sound Wave Equalizer: Switch between chimes on the fly using bottom chips and monitor live audio ripples with the built-in animated equalizer.
+
+4. Dog Training & Pet Desensitization Tool:
+Doorbell ringing is one of the most common triggers for excessive dog barking and household anxiety. DoorbellSimulator serves as an effective, controlled pet training aid. By playing chime sounds at lower volumes and gradually increasing sound levels while rewarding calm behavior, pet owners can desensitize dogs to real doorbells in a stress-free home environment.
+
+5. Safe, Harmless Fun & Friendly Entertainment:
+Surprise your roommates, test your dog's reaction, or entertain friends with harmless virtual doorbell rings. Perfect for theatrical skits, voice acting sound cues, game night soundboards, or fidget tactile relaxation.
+
+6. 100% Offline, Zero Permissions & Zero Battery Drain:
+We believe entertainment utilities should be completely self-contained and respect user privacy unconditionally:
+- Zero Runtime Permissions: No camera, microphone, device storage, contacts, or location access required.
+- 100% Self-Contained & Offline: Operates entirely locally on your phone without requiring Wi-Fi, cellular internet, or online accounts.
+- Zero Battery Drain: Consumes zero power in the background. Sleeps instantly when closed.
+- Zero Tracking: No ads, no tracking analytics, and no personal data collection whatsoever.
+
+Download DoorbellSimulator today and enjoy the most realistic, satisfying, and responsive doorbell chime soundboard on Android!

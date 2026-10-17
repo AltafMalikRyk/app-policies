@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Sandglass Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --secondary: #92400e;
+            --accent: #f59e0b;
+            --gold: #fbbf24;
+            --text-main: #1c1917;
+            --text-muted: #57534e;
+            --bg-page: #faf6f0;
+            --card-bg: #ffffff;
+            --border: #fed7aa;
+            --card-shadow: 0 20px 45px -15px rgba(217, 119, 6, 0.15), 0 0 1px 1px rgba(217, 119, 6, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #1c1917;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: linear-gradient(to top, rgba(28, 25, 23, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 26px;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 20px;
+            display: block;
+            object-fit: cover;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fffbeb;
+            color: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid #fef3c7;
+        }
+        .badge-green {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #d1fae5;
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .meta-info {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: #78716c;
+            font-weight: 500;
+        }
+        
+        /* Content Body */
+        .body-content {
+            padding: 40px 44px;
+        }
+        .summary-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 5px solid var(--primary);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 36px;
+        }
+        .summary-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .summary-box p {
+            color: #78350f;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .section {
+            margin-bottom: 34px;
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            color: var(--secondary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--border);
+        }
+        p {
+            font-size: 0.96rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 14px;
+        }
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        
+        /* Contact Box */
+        .contact-box {
+            background: #fafaf9;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            margin-top: 32px;
+            text-align: center;
+        }
+        .contact-email {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 22px;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        .contact-email:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(217, 119, 6, 0.3);
+        }
+        
+        footer {
+            background: #1c1917;
+            color: #a8a29e;
+            padding: 24px 44px;
+            font-size: 0.85rem;
+            text-align: center;
+            border-top: 1px solid #292524;
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 640px) {
+            .header-content {
+                padding: 0 20px 24px 20px;
+                margin-top: -48px;
+            }
+            .floating-logo {
+                width: 86px;
+                height: 86px;
+            }
+            .body-content {
+                padding: 28px 20px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .banner-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Banner Header -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="Sandglass Simulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+    
+    <!-- Header with Floating Logo -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="Sandglass Simulator Logo" class="floating-logo">
+        </div>
+        <div class="badge-row">
+            <span class="badge">Official Policy</span>
+            <span class="badge badge-green">Zero Permissions</span>
+            <span class="badge badge-green">100% Offline</span>
+        </div>
+        <h1>Sandglass Simulator</h1>
+        <p class="subtitle">Antique Hourglass & Zen Meditation Timer — Privacy Policy</p>
+        <div class="meta-info">
+            <span>Last Updated: October 2026</span>
+            <span>App Version: 1.0.0</span>
+            <span>Package: com.datafaiq.sandglasssimulator</span>
+        </div>
+    </div>
+    
+    <!-- Body Content -->
+    <div class="body-content">
+        
+        <!-- Summary Highlight -->
+        <div class="summary-box">
+            <h3>✦ Quick Privacy Highlights</h3>
+            <p>Sandglass Simulator is an entirely offline entertainment and zen focus timer. We do NOT collect, transmit, store, or sell any personal data, usage metrics, or device identifiers. There are no user accounts, no analytics SDKs, and zero runtime device permissions required.</p>
+        </div>
+        
+        <!-- Section 1 -->
+        <div class="section">
+            <h2>1. Nature of the Application & Zen Disclaimer</h2>
+            <p><strong>Sandglass Simulator</strong> is a casual entertainment and mindful relaxation simulation designed to replicate the visual beauty and ambient soothing acoustics of an antique glass hourglass. The falling sand particle physics, dynamic mound accumulation, and trickling audio are created purely for artistic aesthetics, visual meditation, desk decoration, and casual interval timing.</p>
+            <p>This software does not offer medical treatment, certified psychiatric therapies, or industrial timing precision. It is built solely for calming leisure, concentration assistance, and recreational enjoyment.</p>
+        </div>
+        
+        <!-- Section 2 -->
+        <div class="section">
+            <h2>2. Zero Personal Data Collection</h2>
+            <p>We respect your privacy as an absolute priority. When you install and use Sandglass Simulator:</p>
+            <ul>
+                <li><strong>No Personal Information:</strong> We do not ask for or collect names, email addresses, phone numbers, contacts, or financial details.</li>
+                <li><strong>No Device Identifiers:</strong> We do not log IMEI numbers, MAC addresses, Android Advertising IDs (AAID), or hardware footprints.</li>
+                <li><strong>No Precise or Coarse Location:</strong> We do not access GPS, network location, or Wi-Fi triangulation data.</li>
+                <li><strong>No Cloud Storage or Telemetry:</strong> No data is ever transmitted from your device to external servers or third-party databases.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 3 -->
+        <div class="section">
+            <h2>3. Device Permissions & System Access</h2>
+            <p>Sandglass Simulator has been engineered under a strict zero-privilege model:</p>
+            <ul>
+                <li><strong>Zero Runtime Permissions:</strong> The application does NOT request any dangerous or sensitive runtime Android permissions (such as CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION, READ_CONTACTS, or READ_EXTERNAL_STORAGE).</li>
+                <li><strong>Normal Haptic Feedback:</strong> The application may access the device's tactile vibration motor solely to provide gentle physical feedback when you interactively flip the hourglass. This action occurs exclusively on your local device hardware and does not expose any personal data.</li>
+                <li><strong>Zero Internet Transmission:</strong> The application does not maintain network listeners or background polling tasks.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 4 -->
+        <div class="section">
+            <h2>4. Third-Party Services & Tracking</h2>
+            <p>Sandglass Simulator is completely clean and untracked:</p>
+            <ul>
+                <li>We do NOT integrate Google Analytics, Firebase Analytics, Flurry, or third-party telemetry tools.</li>
+                <li>We do NOT host third-party ad networks, banners, interstitials, or tracking beacons.</li>
+                <li>We do NOT sell, rent, or trade user data to any data brokers or commercial organizations.</li>
+            </ul>
+        </div>
+        
+        <!-- Section 5 -->
+        <div class="section">
+            <h2>5. Children's Privacy (COPPA Compliance)</h2>
+            <p>Because Sandglass Simulator does not collect any personally identifiable information from anyone of any age, it is inherently compliant with the Children's Online Privacy Protection Act (COPPA), General Data Protection Regulation (GDPR-K), and Google Play Families Policy Requirements. Parents and guardians can confidently allow children to enjoy the peaceful visual simulation without privacy concerns.</p>
+        </div>
+        
+        <!-- Section 6 -->
+        <div class="section">
+            <h2>6. User Control & Data Retention</h2>
+            <p>All user preferences (such as sound toggle, haptic vibration toggle, selected sand color theme, and timer duration presets) are stored strictly locally on your device storage. If you choose to uninstall the application, all locally saved preferences are automatically and permanently deleted by the Android operating system.</p>
+        </div>
+        
+        <!-- Section 7 -->
+        <div class="section">
+            <h2>7. Security & Offline Reliability</h2>
+            <p>By operating 100% offline without remote network communication, the application minimizes cybersecurity attack surfaces. Your device stays cool, secure, and private at all times.</p>
+        </div>
+        
+        <!-- Section 8 -->
+        <div class="section">
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may periodically update this policy to reflect any regulatory evolutions or updates in platform compliance. Any amendments will be published directly to this public policy page with an updated revision date.</p>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact-box">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--secondary); margin-bottom: 8px;">Questions or Feedback?</h3>
+            <p style="margin-bottom: 12px;">If you have any questions, inquiries, or feedback regarding this Privacy Policy or Sandglass Simulator, please contact our support team:</p>
+            <a href="mailto:datafaiq.apps@gmail.com" class="contact-email">Contact: datafaiq.apps@gmail.com</a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sandglass Simulator. All rights reserved. | <a href="https://altafmalikryk.github.io/app-policies/SandglassSimulator/index.html">Live Policy URL</a></p>
+    </footer>
+</div>
+
+</body>
+</html>

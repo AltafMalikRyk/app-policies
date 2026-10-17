@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - StaplerSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c62828;
+            --primary-dark: #8e0000;
+            --secondary: #37474f;
+            --accent: #ef5350;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 45px -15px rgba(198, 40, 40, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #11161d;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 110px;
+            background: linear-gradient(to top, rgba(17, 22, 29, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+            margin-bottom: 20px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+        }
+        .app-title {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: #fee2e2;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Body Content */
+        .content-body {
+            padding: 44px;
+        }
+        .section {
+            margin-bottom: 38px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 22px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 4px;
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--primary);
+            padding: 18px 22px;
+            border-radius: 0 14px 14px 0;
+            margin: 22px 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #991b1b;
+            font-weight: 500;
+        }
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .security-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .security-card .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .security-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+        .security-card p {
+            font-size: 13.5px;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            padding: 30px 44px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .header-content { padding: 0 24px 24px 24px; margin-top: -48px; }
+            .floating-logo { width: 86px; height: 86px; }
+            .app-title { font-size: 28px; }
+            .content-body { padding: 28px 24px; }
+            .banner-container { height: 210px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="StaplerSimulator Feature Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Details with Floating Logo -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="StaplerSimulator Logo" class="floating-logo">
+        </div>
+        <div class="app-badge">✓ Offline Tactile Office Desktop Stapler Simulation</div>
+        <h1 class="app-title">Privacy Policy - StaplerSimulator</h1>
+        <div class="last-updated">Effective Date: October 2026 | Application: <strong>StaplerSimulator (com.datafaiq.staplersimulator)</strong></div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content-body">
+        <div class="highlight-box">
+            <p><strong>Quick Summary:</strong> StaplerSimulator is a 100% offline, standalone casual entertainment simulation app. It collects <strong>zero</strong> personal data, requests <strong>zero</strong> sensitive or runtime device permissions, uses no advertising or third-party tracking SDKs, and connects to no external servers.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. Entertainment Simulation Disclaimer</h2>
+            <p><strong>StaplerSimulator</strong> is designed solely for tactile fidgeting, casual office roleplay, stress relief, and soothing mechanical ASMR audio simulation. All staplers, virtual paper sheets, silver staple pins, and clamping animations depicted within the application are purely digital entertainment representations and have no physical binding capacity or official utility outside the app.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Zero Data Collection Policy</h2>
+            <p>We respect and prioritize your absolute privacy. When using StaplerSimulator:</p>
+            <ul>
+                <li><strong>No Personal Identifiable Information (PII):</strong> We do not request, harvest, transmit, or store names, email addresses, phone numbers, contact books, or accounts.</li>
+                <li><strong>No Location Tracking:</strong> The application has no access to GPS, Wi-Fi network positions, or cellular triangulations.</li>
+                <li><strong>No File or Storage Inspection:</strong> We never inspect, read, or access your device photos, gallery, files, external storage, or documents.</li>
+                <li><strong>No Keystroke or Sensory Logging:</strong> Your virtual staple positions exist solely in volatile device memory (RAM) during your session and are automatically cleared upon app termination or manual document wipe.</li>
+            </ul>
+        </div>
+
+        <div class="security-grid">
+            <div class="security-card">
+                <div class="icon">🔒</div>
+                <h4>100% Offline</h4>
+                <p>Functions completely without an active internet connection or cellular data.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">🛡️</div>
+                <h4>Zero Permissions</h4>
+                <p>No camera, microphone, internal files, storage, or location permissions.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">🚫</div>
+                <h4>Zero Tracking</h4>
+                <p>Contains no third-party ad networks, telemetry trackers, or marketing SDKs.</p>
+            </div>
+            <div class="security-card">
+                <div class="icon">👶</div>
+                <h4>Child & Family Safe</h4>
+                <p>Fully compliant with global child online privacy standards (COPPA).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. Zero Sensitive Device Permissions</h2>
+            <p>StaplerSimulator is engineered to be fully self-contained. The application explicitly does not request nor utilize any sensitive Android runtime permissions:</p>
+            <ul>
+                <li><code>android.permission.CAMERA</code> - NOT REQUESTED</li>
+                <li><code>android.permission.RECORD_AUDIO</code> - NOT REQUESTED</li>
+                <li><code>android.permission.ACCESS_FINE_LOCATION</code> - NOT REQUESTED</li>
+                <li><code>android.permission.READ_EXTERNAL_STORAGE</code> - NOT REQUESTED</li>
+                <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code> - NOT REQUESTED</li>
+            </ul>
+            <p>Non-sensitive device hardware APIs such as standard vibration (haptic recoil feedback) and low-latency audio sonification are used strictly locally to deliver satisfying physical feedback when the stapler lever strikes the anvil plate.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Third-Party SDKs and Behavioral Tracking</h2>
+            <p>StaplerSimulator contains <strong>no</strong> third-party software development kits (SDKs) for monetization (such as Google AdMob, Unity Ads, AppLovin, or Meta Audience Network) and <strong>no</strong> user behavioral analytics (such as Firebase Analytics, Mixpanel, or AppsFlyer). The app operates without background telemetry or diagnostic profiling.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. Children’s Online Privacy Protection Act (COPPA)</h2>
+            <p>Because StaplerSimulator does not collect, retain, or transmit personal information from any user, it is completely compliant with the Children’s Online Privacy Protection Act (COPPA) as well as global data privacy regulations (GDPR). The application is safe and appropriate for users of all ages, including children under 13.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. Data Security and Transmission</h2>
+            <p>Because no network requests are dispatched by the app, there is no risk of intercepting or leaking personal data in transit or on remote servers. All interactive app states remain strictly localized to the device hardware.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">7. Changes to This Privacy Policy</h2>
+            <p>We may occasionally revise this Privacy Policy to ensure alignment with future software versions or statutory guidelines. Any updates will be published directly to this public webpage with an updated effective date.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">8. Developer Contact Information</h2>
+            <p>If you have questions, comments, or require technical support concerning this Privacy Policy or StaplerSimulator, please reach out to us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:developer@datafaiq.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">developer@datafaiq.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 StaplerSimulator. All rights reserved. Designed purely for casual office ASMR simulation and fidget entertainment.</p>
+    </div>
+</div>
+
+</body>
+</html>

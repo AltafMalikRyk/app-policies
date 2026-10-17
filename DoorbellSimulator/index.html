@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DoorbellSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00bcd4;
+            --primary-dark: #00838f;
+            --accent: #00e5ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 45px -15px rgba(0, 188, 212, 0.16), 0 0 1px 1px rgba(0, 188, 212, 0.08);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #090b10;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(9, 11, 16, 0.94), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+            margin-bottom: 18px;
+        }
+        .floating-logo {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e0f7fa;
+            color: #00838f;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid #b2ebf2;
+        }
+        h1 {
+            color: #006064;
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            color: #64748b;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+        
+        /* Body Content */
+        .content-body {
+            padding: 40px 44px 50px 44px;
+        }
+        .highlight-box {
+            background: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            border-radius: 16px;
+            padding: 22px 26px;
+            margin-bottom: 36px;
+            color: #006064;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .highlight-box .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+        
+        section {
+            margin-bottom: 34px;
+        }
+        h2 {
+            color: #006064;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-bottom: 16px;
+        }
+        li {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        li strong {
+            color: #1e293b;
+        }
+        
+        .contact-card {
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            border-radius: 18px;
+            padding: 28px;
+            margin-top: 40px;
+            border-left: 6px solid var(--primary);
+        }
+        .contact-card h3 {
+            color: #0f766e;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .contact-card a {
+            color: var(--primary-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+        
+        @media (max-width: 680px) {
+            .banner-container {
+                height: 200px;
+            }
+            .header-content {
+                padding: 0 24px 24px 24px;
+                margin-top: -48px;
+            }
+            .floating-logo {
+                width: 82px;
+                height: 82px;
+            }
+            .content-body {
+                padding: 28px 24px 36px 24px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Header -->
+        <div class="banner-container">
+            <img src="feature_graphic.png" alt="DoorbellSimulator Feature Graphic" class="banner-img">
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Floating Logo & Title Header -->
+        <div class="header-content">
+            <div class="floating-logo-wrapper">
+                <img src="icon_512.png" alt="DoorbellSimulator App Icon" class="floating-logo">
+            </div>
+            <div>
+                <span class="badge">Official Privacy Document</span>
+                <h1>Privacy Policy for DoorbellSimulator</h1>
+                <div class="meta-info">Application ID: com.datafaiq.doorbellsimulator • Effective Date: October 18, 2026</div>
+            </div>
+        </div>
+
+        <!-- Content Body -->
+        <div class="content-body">
+            <div class="highlight-box">
+                <div class="icon">🔔</div>
+                <div>
+                    <strong>Summary & Zero-Data Guarantee:</strong> DoorbellSimulator is a lightweight, offline casual simulation utility created strictly for entertainment, sound novelty, and pet training cues. We do NOT collect, harvest, store, transmit, or share any personal information, device telemetry, identifiers, or location data whatsoever.
+                </div>
+            </div>
+
+            <section>
+                <h2>1. Purpose & Entertainment Simulation Disclaimer</h2>
+                <p><strong>DoorbellSimulator</strong> is designed exclusively for tactile satisfaction, acoustic entertainment, friendly pranks, pet desensitization cues, and casual digital soundboard play. The application recreates the visual appearance of a modern architectural smart doorbell unit with a responsive mechanical push button, illuminated glowing LED halo ring, and studio-quality synthesized acoustic chimes (Classic Ding-Dong, Westminster Chimes, Cyber Intercom, and Vintage Brass Bell).</p>
+                <p>The application is a pure software simulation and does not physically connect to real-world smart doorbells, home security systems, electrical wiring, or external hardware. It is 100% safe for users of all ages.</p>
+            </section>
+
+            <section>
+                <h2>2. Zero Personal Information Collection</h2>
+                <p>We respect your privacy unconditionally. DoorbellSimulator operates under a strict Zero-Knowledge and Zero-Data Collection policy:</p>
+                <ul>
+                    <li><strong>No Personal Identifiers:</strong> We do not ask for, gather, or store your name, email address, physical address, phone number, or social media credentials.</li>
+                    <li><strong>No User Account:</strong> The application does not require account creation, login, cloud authentication, or personal profile registration.</li>
+                    <li><strong>No Financial Data:</strong> There are no in-app purchases, micro-transactions, paid subscriptions, or banking data transactions processed within the application.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Zero Runtime & Sensitive Device Permissions</h2>
+                <p>DoorbellSimulator requires <strong>ZERO runtime or sensitive permissions</strong> from your Android operating system. Specifically:</p>
+                <ul>
+                    <li><strong>No Camera or Microphone Access:</strong> The app never captures audio recordings, photographs, or visual media from your device.</li>
+                    <li><strong>No Location Tracking:</strong> The app has zero access to GPS, fine or coarse location sensors, or network-derived position.</li>
+                    <li><strong>No Storage Access:</strong> The application does not read or inspect your photos, media libraries, documents, external storage, or filesystem.</li>
+                    <li><strong>No Contacts, SMS, or Phone State:</strong> The app never accesses your address book, call logs, phone state, or messaging history.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Complete Offline Architecture & No Analytics Tracking</h2>
+                <p>The entire application runs entirely self-contained on your mobile device:</p>
+                <ul>
+                    <li><strong>100% Offline Capability:</strong> All visual rendering, button press animations, and chime audio synthesis are processed locally on your device without requiring internet connectivity or mobile network access.</li>
+                    <li><strong>No Third-Party Analytics:</strong> We do not integrate tracking SDKs, marketing beacons, telemetry libraries, or behavioural monitoring software (such as Google Firebase Analytics, Mixpanel, or Adjust).</li>
+                    <li><strong>No Advertisements:</strong> DoorbellSimulator contains zero ad banners, interstitial popups, rewarded video ads, or third-party advertising networks.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Children's Online Privacy Protection Act (COPPA) Compliance</h2>
+                <p>Because DoorbellSimulator does not collect, retain, or disclose any personal data from any user, it is completely compliant with the Children's Online Privacy Protection Act (COPPA), General Data Protection Regulation (GDPR), and worldwide child safety frameworks. The application is safe, friendly, and non-hazardous for children, families, and users of all ages.</p>
+            </section>
+
+            <section>
+                <h2>6. External Links & Privacy Policy Transparency</h2>
+                <p>The application provides an optional informational link within its Settings screen allowing users to review this online Privacy Policy in their device's default web browser. When you click this link, your browser navigates to this publicly hosted GitHub Pages document. We do not track, log, or profile your browsing activity when viewing this document.</p>
+            </section>
+
+            <section>
+                <h2>7. Modifications to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to maintain full alignment with applicable legal standards or platform policies. Any future modifications will be posted directly to this public URL with an updated effective date. We encourage users to periodically check this page for any updates.</p>
+            </section>
+
+            <div class="contact-card">
+                <h3>Contact & Inquiries</h3>
+                <p>If you have any questions, feedback, or need further clarification regarding this Privacy Policy or DoorbellSimulator, please feel free to reach out to our developer team at:</p>
+                <p><strong>Developer Support:</strong> <a href="mailto:support.datafaiq@gmail.com">support.datafaiq@gmail.com</a></p>
+                <p><strong>Package Identifier:</strong> com.datafaiq.doorbellsimulator</p>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 DoorbellSimulator. All rights reserved. • Pure Offline Entertainment
+        </footer>
+    </div>
+</body>
+</html>

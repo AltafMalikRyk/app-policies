@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Soda Can Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c8102e;
+            --primary-dark: #990011;
+            --secondary: #ff4d6d;
+            --accent: #ffb703;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #0d0f14;
+            --card-bg: #ffffff;
+            --card-inner: #f8fafc;
+            --border: #f1f5f9;
+            --card-shadow: 0 25px 50px -12px rgba(200, 16, 46, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.75;
+            padding: 40px 16px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(200, 16, 46, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 183, 3, 0.08) 0%, transparent 40%);
+        }
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 340px;
+            background: #11141c;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: linear-gradient(to top, rgba(13, 15, 20, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 48px 36px 48px;
+            border-bottom: 2px solid #f1f5f9;
+            margin-top: -68px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+            margin-bottom: 20px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            display: block;
+            object-fit: cover;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffe5e8;
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid #ffccd2;
+        }
+        h1 {
+            color: #0f172a;
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        /* Body Content */
+        .content-body {
+            padding: 44px 48px 56px 48px;
+        }
+        .highlight-box {
+            background: #fff5f5;
+            border: 1px solid #ffd6d9;
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 40px;
+            color: #8c0a1e;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .highlight-box .icon {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #7a0c1c;
+        }
+        
+        section {
+            margin-bottom: 38px;
+        }
+        h2 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        p {
+            font-size: 1.02rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+        li {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        li strong {
+            color: #0f172a;
+        }
+        
+        .contact-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 44px;
+            border-left: 6px solid var(--primary);
+        }
+        .contact-card h3 {
+            color: #0f172a;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .contact-card a {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #94a3b8;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 8px;
+            }
+            .banner-container {
+                height: 220px;
+            }
+            .header-content {
+                padding: 0 24px 28px 24px;
+                margin-top: -48px;
+            }
+            .floating-logo {
+                width: 86px;
+                height: 86px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            .content-body {
+                padding: 30px 24px 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Header -->
+        <div class="banner-container">
+            <img class="banner-img" src="feature_graphic.png" alt="Soda Can Simulator Feature Banner">
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Floating Logo & Title Section -->
+        <div class="header-content">
+            <div class="floating-logo-wrapper">
+                <img class="floating-logo" src="icon_512.png" alt="Soda Can Simulator Icon">
+            </div>
+            <div>
+                <span class="badge">Official Policy & Privacy Standard</span>
+                <h1>Soda Can Simulator</h1>
+                <div class="meta-info">
+                    <span>Effective Date: October 2026</span> • 
+                    <span>Application ID: com.datafaiq.sodacansimulator</span> • 
+                    <span>Platform: Android</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy Content -->
+        <div class="content-body">
+            <div class="highlight-box">
+                <span class="icon">🥫</span>
+                <p><strong>Privacy Summary:</strong> Soda Can Simulator is a 100% offline, privacy-first sensory ASMR entertainment application. We do not collect, transmit, store, sell, or share any personal information or device telemetry. No internet connection or device permissions are required.</p>
+            </div>
+
+            <section>
+                <h2>1. ASMR Entertainment Disclaimer</h2>
+                <p><strong>Soda Can Simulator</strong> is designed solely for casual entertainment, sensory ASMR auditory satisfaction, virtual beverage roleplay, and tactile stress-relief. All aluminum can visuals, pull-tab crack acoustics, carbonation fizz hiss sounds, and liquid pouring effects are purely simulated digital representations. No real beverages or carbonated drinks are dispensed or consumed.</p>
+            </section>
+
+            <section>
+                <h2>2. Zero Personal Data Collection</h2>
+                <p>We respect and prioritize your digital privacy. When you download, install, and interact with Soda Can Simulator:</p>
+                <ul>
+                    <li><strong>No Personal Identifiers:</strong> We do not collect names, email addresses, phone numbers, postal addresses, or government identifiers.</li>
+                    <li><strong>No Hardware Identifiers:</strong> We do not gather IMEI numbers, MAC addresses, Android Advertising IDs (AAID), or hardware fingerprints.</li>
+                    <li><strong>No Usage Telemetry:</strong> We do not log how many times you open cans, your flavor choices, or your app session duration.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Zero Runtime Permissions Required</h2>
+                <p>Soda Can Simulator operates completely self-contained. The application requests <strong>zero dangerous or sensitive device permissions</strong>:</p>
+                <ul>
+                    <li>No Camera or Video Recording permissions.</li>
+                    <li>No Microphone or Audio Recording permissions.</li>
+                    <li>No GPS or Network Location permissions.</li>
+                    <li>No Read/Write External Storage or Media Library permissions.</li>
+                    <li>No Contacts, Calendar, or Phone State access.</li>
+                </ul>
+                <p>Audio playback is handled through standard Android media components and tactile haptic pulses utilize the standard device vibrator API without accessing any personal user data.</p>
+            </section>
+
+            <section>
+                <h2>4. No Third-Party Tracking & 100% Offline Operation</h2>
+                <p>The app is built to run entirely offline without requiring network connectivity:</p>
+                <ul>
+                    <li><strong>No Third-Party SDKs:</strong> No third-party behavioral analytics (such as Google Analytics or Firebase) are bundled.</li>
+                    <li><strong>No Ad Networks:</strong> No third-party advertisements or ad-tracking networks are integrated into the application.</li>
+                    <li><strong>Zero Data Transmission:</strong> The application does not communicate with external servers during regular gameplay.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Children’s Privacy (COPPA & Family Friendly)</h2>
+                <p>Soda Can Simulator complies fully with the <strong>Children’s Online Privacy Protection Act (COPPA)</strong> and global child safety standards. Because the application does not collect any personal data whatsoever, it is safe and appropriate for users of all ages, including children under 13.</p>
+            </section>
+
+            <section>
+                <h2>6. Local Preference Storage</h2>
+                <p>Any settings you adjust inside the app (such as your chosen soda flavor, audio mute toggle, or haptics toggle) are saved exclusively on your local device storage using standard application sandboxing. This data never leaves your device and is erased if you choose to uninstall the app.</p>
+            </section>
+
+            <section>
+                <h2>7. Policy Updates</h2>
+                <p>We may occasionally update this Privacy Policy to reflect future application enhancements. Any revisions will be published immediately to this URL with a revised effective date.</p>
+            </section>
+
+            <div class="contact-card">
+                <h3>Contact & Support Inquiries</h3>
+                <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or Soda Can Simulator, please reach out to our team:</p>
+                <p><strong>Email:</strong> <a href="mailto:support@sodacansimulator.app">support@sodacansimulator.app</a></p>
+                <p><strong>Developer:</strong> Data Faiq Software Team</p>
+            </div>
+
+            <footer>
+                <p>&copy; 2026 Soda Can Simulator. All rights reserved. Designed for sensory relaxation and casual entertainment.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
