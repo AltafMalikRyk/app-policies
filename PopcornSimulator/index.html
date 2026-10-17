@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PopcornSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d32f2f;
+            --primary-dark: #8e0000;
+            --accent: #fbc02d;
+            --secondary: #263238;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 45px -15px rgba(211, 47, 47, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #1a080d;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.95), transparent);
+        }
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+            margin-bottom: 20px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 22px;
+            display: block;
+            object-fit: cover;
+        }
+        .app-title {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(211, 47, 47, 0.08);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 14px;
+        }
+        .effective-date {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        /* Content Body */
+        .content-body {
+            padding: 44px;
+        }
+        .intro-lead {
+            font-size: 17px;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 32px;
+            line-height: 1.8;
+            background: #fff8f8;
+            padding: 24px;
+            border-radius: 18px;
+            border-left: 5px solid var(--primary);
+        }
+        .clause-section {
+            margin-bottom: 38px;
+        }
+        .clause-title {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .clause-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(251, 192, 45, 0.16);
+            color: #b78103;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0;
+        }
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 15.5px;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #16a34a;
+            font-weight: 800;
+            font-size: 16px;
+        }
+        /* Highlight Info Card */
+        .info-card {
+            background: #f1f5f9;
+            border-radius: 18px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 1px solid #cbd5e1;
+        }
+        .info-card h4 {
+            color: #0f172a;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 32px 44px;
+            font-size: 14px;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+        .footer a {
+            color: #fbc02d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .header-content {
+                padding: 0 24px 24px 24px;
+                margin-top: -48px;
+            }
+            .content-body {
+                padding: 28px 24px;
+            }
+            .banner-container {
+                height: 220px;
+            }
+            .floating-logo {
+                width: 80px;
+                height: 80px;
+            }
+            .app-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Graphic Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="PopcornSimulator Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Section with Floating Logo -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="PopcornSimulator App Icon" class="floating-logo">
+        </div>
+        <div class="app-badge">🍿 Verified Clean Application • Zero Permissions</div>
+        <h1 class="app-title">PopcornSimulator</h1>
+        <p class="effective-date">Official Privacy Policy • Effective Date: October 18, 2026</p>
+    </div>
+
+    <!-- Content Body -->
+    <div class="content-body">
+        <div class="intro-lead">
+            Welcome to <strong>PopcornSimulator</strong>. This Privacy Policy details our unwavering commitment to protecting your digital privacy, adhering to global data protection regulations, and explaining why our application operates entirely offline with zero personal data collection.
+        </div>
+
+        <!-- Clause 1 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">🎭</span>
+                1. Entertainment & Simulation Disclaimer
+            </h2>
+            <p>
+                <strong>PopcornSimulator</strong> is an entertainment and sensory ASMR application developed purely for casual amusement, cinema concession nostalgia, and visual relaxation.
+            </p>
+            <p>
+                All elements represented within the software — including heating kettle temperatures, kernel burst physics, bubbling oil sounds, and virtual popcorn snacking interactions — are simulated digitally on your device. The application does not control any physical culinary hardware, does not produce real food, and poses zero hazard to the user or device.
+            </p>
+        </div>
+
+        <!-- Clause 2 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">🛡️</span>
+                2. Zero Personal Data Collection
+            </h2>
+            <p>
+                We believe in total privacy by design. When you install and play <strong>PopcornSimulator</strong>, we collect <strong>absolutely no personal data</strong>. Specifically:
+            </p>
+            <ul>
+                <li>No names, usernames, email addresses, or phone numbers are requested or stored.</li>
+                <li>No device identifiers (such as IMEI, Android ID, Advertising ID, or MAC address) are gathered.</li>
+                <li>No precise or approximate geographic location data is accessed or processed.</li>
+                <li>No biometric, health, financial, or behavioral information is tracked.</li>
+            </ul>
+        </div>
+
+        <!-- Clause 3 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">🔒</span>
+                3. Zero Runtime & Sensitive Device Permissions
+            </h2>
+            <p>
+                Unlike many modern mobile applications, <strong>PopcornSimulator</strong> requires <strong>zero dangerous or sensitive runtime device permissions</strong>:
+            </p>
+            <ul>
+                <li>NO Camera Access (android.permission.CAMERA)</li>
+                <li>NO Microphone Access (android.permission.RECORD_AUDIO)</li>
+                <li>NO Storage or Photo Gallery Access (READ/WRITE_EXTERNAL_STORAGE)</li>
+                <li>NO Location Access (ACCESS_FINE/COARSE_LOCATION)</li>
+                <li>NO Contacts, Calendar, or SMS Permissions</li>
+            </ul>
+            <p>
+                The application utilizes only standard device vibration hardware for tactile popping haptics (VIBRATE), which operates strictly locally on your handset.
+            </p>
+        </div>
+
+        <!-- Clause 4 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">📶</span>
+                4. 100% Offline Architecture & No Server Transmission
+            </h2>
+            <p>
+                <strong>PopcornSimulator</strong> is built as an entirely self-contained, offline application. All graphical assets, custom audio synthesizers, and physics simulations are packaged locally within the application bundle.
+            </p>
+            <div class="info-card">
+                <h4>Offline Integrity Guarantee</h4>
+                <p style="margin-bottom: 0;">
+                    The app functions without an active internet connection. It does not transmit telemetry, analytics, crash logs, or user usage habits to any remote server or cloud infrastructure.
+                </p>
+            </div>
+        </div>
+
+        <!-- Clause 5 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">👶</span>
+                5. Children’s Privacy (COPPA & GDPR-K Compliance)
+            </h2>
+            <p>
+                Because <strong>PopcornSimulator</strong> contains zero data collection, zero third-party advertising, and zero in-app purchases, it complies fully with the Children’s Online Privacy Protection Act (COPPA), the General Data Protection Regulation for Children (GDPR-K), and Google Play’s Families Policy.
+            </p>
+            <p>
+                Parents and guardians can rest assured that children of all ages can enjoy the colorful popcorn popping simulation without any exposure to behavioral profiling, trackers, or commercial solicitations.
+            </p>
+        </div>
+
+        <!-- Clause 6 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">🚫</span>
+                6. Zero Third-Party Trackers & Advertising SDKs
+            </h2>
+            <p>
+                Our codebase is completely free of third-party advertising networks, analytics engines (such as Firebase Analytics, Adjust, or AppsFlyer), and tracking beacons. We do not monetize user data in any manner whatsoever.
+            </p>
+        </div>
+
+        <!-- Clause 7 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">💾</span>
+                7. Local Storage of User Preferences
+            </h2>
+            <p>
+                Any customization choices made within the Settings screen — such as audio volume, haptic feedback toggle, popping speed mode, and your session pop counter — are stored exclusively in local sandbox memory on your physical Android device. These settings never leave your handset and are instantly cleared if you choose to uninstall the application.
+            </p>
+        </div>
+
+        <!-- Clause 8 -->
+        <div class="clause-section">
+            <h2 class="clause-title">
+                <span class="clause-icon">📬</span>
+                8. Developer Contact Information
+            </h2>
+            <p>
+                If you have questions, inquiries, or feedback regarding this Privacy Policy or the security of <strong>PopcornSimulator</strong>, please contact the developer:
+            </p>
+            <p>
+                <strong>Developer:</strong> DataFaiq Apps<br>
+                <strong>Email:</strong> <a href="mailto:datafaiq.apps@gmail.com" style="color: var(--primary); font-weight: 600;">datafaiq.apps@gmail.com</a><br>
+                <strong>Package Name:</strong> com.datafaiq.popcornsimulator
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 PopcornSimulator • Designed for sensory entertainment and cinema lovers.</p>
+        <p>Zero Permissions • Zero Tracking • 100% Offline</p>
+    </div>
+</div>
+
+</body>
+</html>

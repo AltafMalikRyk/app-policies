@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PaperShredderSimulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00bcd4;
+            --primary-dark: #00838f;
+            --secondary: #1e293b;
+            --accent: #00e5ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --card-shadow: 0 20px 45px -15px rgba(0, 188, 212, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 30px 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        
+        /* Banner Header */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #0f172a;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 110px;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+        }
+        
+        /* Floating Logo & Header Content */
+        .header-content {
+            position: relative;
+            padding: 0 44px 32px 44px;
+            border-bottom: 2px solid var(--border);
+            margin-top: -64px;
+        }
+        .floating-logo-wrapper {
+            display: inline-block;
+            padding: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+            margin-bottom: 20px;
+        }
+        .floating-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+        }
+        .app-title {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e0f7fa;
+            color: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            border: 1px solid rgba(0, 188, 212, 0.3);
+        }
+        .app-meta {
+            color: var(--text-muted);
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .app-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Body Content */
+        .content {
+            padding: 40px 44px;
+        }
+        .section {
+            margin-bottom: 34px;
+        }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 22px;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            font-size: 15px;
+        }
+        ul {
+            margin: 12px 0 16px 24px;
+            color: #334155;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* Highlight Cards */
+        .callout-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 14.5px;
+            color: #134e4a;
+        }
+        .callout-box strong {
+            color: #042f2e;
+        }
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .badge-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .badge-card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #e0f7fa;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .badge-card-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+        .badge-card-text p {
+            font-size: 12.5px;
+            color: #64748b;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f1f5f9;
+            padding: 28px 44px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13.5px;
+            color: #64748b;
+        }
+        .footer a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px 8px; }
+            .banner-container { height: 210px; }
+            .header-content { padding: 0 20px 24px 20px; margin-top: -46px; }
+            .floating-logo { width: 84px; height: 84px; }
+            .app-title { font-size: 26px; }
+            .content { padding: 24px 20px; }
+            .footer { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="banner-container">
+        <img src="feature_graphic.png" alt="PaperShredderSimulator Feature Banner" class="banner-img">
+        <div class="banner-overlay"></div>
+    </div>
+
+    <!-- Header Content with Floating Logo -->
+    <div class="header-content">
+        <div class="floating-logo-wrapper">
+            <img src="icon_512.png" alt="PaperShredderSimulator Logo" class="floating-logo">
+        </div>
+        <div class="app-badge">✓ Offline Simulation • Zero Data Collection</div>
+        <h1 class="app-title">PaperShredderSimulator</h1>
+        <div class="app-meta">
+            <span><strong>Package:</strong> com.datafaiq.papershreddersimulator</span>
+            <span><strong>Effective Date:</strong> October 2026</span>
+            <span><strong>Platform:</strong> Android</span>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Main Content -->
+    <div class="content">
+        <!-- Section 1 -->
+        <div class="section">
+            <h2 class="section-title">1. Introduction & Overview</h2>
+            <p>Welcome to <strong>PaperShredderSimulator</strong>, an offline, interactive sensory simulation application engineered exclusively for desktop paper shredder simulation, ASMR soundscapes, and casual stress-relief entertainment. We prioritize your personal privacy and safety above all else.</p>
+            <p>This Privacy Policy explains the operational practices of PaperShredderSimulator. In summary: <strong>we collect, store, transmit, process, and share ZERO personal or non-personal information.</strong> The application operates entirely locally on your Android device.</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+            <h2 class="section-title">2. Pure Entertainment & ASMR Disclaimer</h2>
+            <p>PaperShredderSimulator is developed solely for <strong>entertainment, casual fidgeting, and acoustic sensory relaxation (ASMR)</strong>. The virtual documents presented in the app (such as Confidential Memos, Tax Audit Bills, Meeting Doodle Sheets, and Parking Violations) are entirely fictional, satirical, and simulated templates.</p>
+            <div class="callout-box">
+                <strong>Simulated Destruction:</strong> Tearing or shredding virtual documents in the app produces animated visual ribbons and synthetic audio effects. No real documents are destroyed, and no actual confidential files on your device are ever accessed or modified.
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section">
+            <h2 class="section-title">3. Zero Personal Data Collection</h2>
+            <p>We hold an uncompromising zero-data collection policy:</p>
+            <div class="badge-grid">
+                <div class="badge-card">
+                    <div class="badge-card-icon">🛡️</div>
+                    <div class="badge-card-text">
+                        <h4>No Personal Info</h4>
+                        <p>No names, email addresses, phone numbers, contacts, or identities are requested.</p>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-card-icon">📍</div>
+                    <div class="badge-card-text">
+                        <h4>No Location Tracking</h4>
+                        <p>We do not access GPS, Wi-Fi location, IP-based geographic positioning, or beacons.</p>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-card-icon">📁</div>
+                    <div class="badge-card-text">
+                        <h4>No File Access</h4>
+                        <p>The app has zero storage permissions and cannot read your personal files or photos.</p>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <div class="badge-card-icon">📊</div>
+                    <div class="badge-card-text">
+                        <h4>No Telemetry</h4>
+                        <p>No analytics trackers, user behavior profiling, or crash monitoring trackers exist in the app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section">
+            <h2 class="section-title">4. Zero Device Permissions Required</h2>
+            <p>PaperShredderSimulator complies with the strictest Android permission guidelines. The app operates with <strong>ZERO runtime permissions</strong>:</p>
+            <ul>
+                <li><strong>NO Camera Permission:</strong> The app never opens or accesses your camera.</li>
+                <li><strong>NO Microphone Permission:</strong> The app never listens to or records your voice. All tearing and shredding sounds are synthetic assets stored locally in the package.</li>
+                <li><strong>NO Storage or Media Access:</strong> The app cannot view, modify, or read your device's photo gallery, document folders, or external storage.</li>
+                <li><strong>NO Contacts or Account Access:</strong> The app has zero visibility into your personal address book or logged-in accounts.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section">
+            <h2 class="section-title">5. Local On-Device State Only</h2>
+            <p>Any configuration options you adjust in the app (such as mechanical motor volume, haptic vibration toggle, cutting speed slider, or lifetime shredded sheets count) are stored exclusively in the volatile memory and sandboxed local cache of your device. These preference values never leave your hardware and can be cleared at any moment by clearing the application cache.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section">
+            <h2 class="section-title">6. Children's Online Privacy (COPPA Compliance)</h2>
+            <p>PaperShredderSimulator is completely family-friendly and safe for users of all ages, including children under 13. We fully comply with the Children's Online Privacy Protection Act (COPPA) and international child privacy regulations. Because the app does not collect personal identifiers, IP addresses, or device data, parents can be confident in an entirely safe digital environment.</p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section">
+            <h2 class="section-title">7. No Third-Party Analytics or Advertising</h2>
+            <p>PaperShredderSimulator contains:</p>
+            <ul>
+                <li>No third-party analytics libraries (such as Google Analytics or Firebase Crashlytics).</li>
+                <li>No targeted advertising SDKs (such as AdMob, Unity Ads, or AppLovin).</li>
+                <li>No behavioral retargeting or advertising identifiers (AAID).</li>
+            </ul>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section">
+            <h2 class="section-title">8. Changes to This Privacy Policy</h2>
+            <p>Should any updates or enhancements be introduced to PaperShredderSimulator in future releases, this Privacy Policy will be revised accordingly. Any updates will remain available at this permanent GitHub Pages URL.</p>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="section">
+            <h2 class="section-title">9. Contact the Developer</h2>
+            <p>If you have any questions, feedback, or inquiries regarding PaperShredderSimulator or this Privacy Policy, please contact our support team:</p>
+            <div class="callout-box">
+                <strong>Developer Support:</strong><br>
+                Email: <a href="mailto:datafaiq.apps@gmail.com" style="color: var(--primary-dark); font-weight: bold;">datafaiq.apps@gmail.com</a><br>
+                Developer: DataFaiq Apps<br>
+                Location: Bahawalpur, Punjab, Pakistan
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 PaperShredderSimulator. All rights reserved. Self-contained offline entertainment simulation.</p>
+    </div>
+</div>
+
+</body>
+</html>
