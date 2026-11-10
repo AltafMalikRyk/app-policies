@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - FuelCost Tool</title>
+  <style>
+    :root {
+      --bg-grad: linear-gradient(135deg, #07111e 0%, #091f1a 50%, #08131d 100%);
+      --card-bg: rgba(19, 32, 48, 0.72);
+      --card-border: rgba(52, 211, 153, 0.24);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #34d399;
+      --accent-2: #38bdf8;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-grad: linear-gradient(135deg, #eef6ff 0%, #ecfdf5 100%);
+        --card-bg: rgba(255, 255, 255, 0.80);
+        --card-border: rgba(5, 150, 105, 0.18);
+        --text: #0f172a;
+        --text-muted: #475569;
+        --accent: #059669;
+        --accent-2: #0f4c81;
+        --shadow: 0 10px 30px rgba(5, 150, 105, 0.10);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg-grad);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .hero { position: relative; text-align: center; margin-bottom: 32px; }
+    .feature-img {
+      width: 100%; max-height: 360px; object-fit: cover;
+      border-radius: 24px; border: 1px solid var(--card-border); box-shadow: var(--shadow);
+    }
+    .floating-logo {
+      width: 96px; height: 96px; border-radius: 24px; margin: -48px auto 14px;
+      display: block; border: 3px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(52, 211, 153, 0.35);
+      background: #0b111a; position: relative; z-index: 2;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .subtitle { color: var(--accent); font-weight: 700; font-size: 15px; }
+    .badge-row {
+      display: inline-block; margin-top: 10px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(52, 211, 153, 0.14); border: 1px solid var(--card-border);
+      font-size: 12.5px; font-weight: 600; color: var(--accent-2);
+    }
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--card-border); border-radius: 22px;
+      padding: 24px; margin-bottom: 18px; box-shadow: var(--shadow);
+    }
+    h2 { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+    p, li { font-size: 14.5px; color: var(--text); }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    .footer {
+      text-align: center; margin-top: 28px; padding: 20px; border-radius: 20px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      font-size: 13.5px; color: var(--text-muted);
+    }
+    .footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <img src="feature_graphic.png" alt="FuelCost Tool Banner" class="feature-img">
+      <img src="icon_512.png" alt="FuelCost Tool Icon" class="floating-logo">
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">FuelCost Tool (com.articode.app.fuelcosttool)</div>
+      <div class="badge-row">100% Offline • Zero Permissions • Zero Tracking</div>
+    </div>
+
+    <div class="glass-card">
+      <h2>1. Zero Data Collection</h2>
+      <p>FuelCost Tool collects zero personal information, trip history, analytics, advertising identifiers, or diagnostic logs. The application does not maintain user accounts and transmits nothing off your device.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>2. Zero Permissions Architecture</h2>
+      <p>FuelCost Tool requests zero dangerous or runtime Android permissions:</p>
+      <ul>
+        <li>No GPS, coarse location, or background trip tracking.</li>
+        <li>No access to Camera, Microphone, Contacts, or Storage.</li>
+        <li>No advertising SDKs or hidden network trackers.</li>
+      </ul>
+    </div>
+
+    <div class="glass-card">
+      <h2>3. Fully Offline Processing</h2>
+      <p>All fuel consumption, metric/imperial conversions, and passenger cost splits happen completely offline in volatile local device memory. Theme, haptic, and decimal precision preferences are stored strictly locally in SharedPreferences and deleted when the app is uninstalled.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>4. Children's Privacy &amp; COPPA Compliance</h2>
+      <p>FuelCost Tool collects zero data from any user regardless of age and fully complies with COPPA and international child privacy protection regulations.</p>
+    </div>
+
+    <div class="footer">
+      Effective Date: November 10, 2026<br>
+      Developer Contact: <a href="mailto:altafmalikryk@gmail.com">altafmalikryk@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
+
