@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - KalamClassic Reader</title>
+  <style>
+    :root {
+      --bg-grad: linear-gradient(135deg, #0b0812 0%, #240c16 55%, #12101a 100%);
+      --card-bg: rgba(34, 18, 28, 0.72);
+      --card-border: rgba(245, 208, 97, 0.25);
+      --text: #f8f5f0;
+      --text-muted: #cbbba6;
+      --accent: #f5d061;
+      --accent-2: #f472b6;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.48);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-grad: linear-gradient(135deg, #fdf6e9 0%, #f9ebe0 100%);
+        --card-bg: rgba(255, 252, 245, 0.85);
+        --card-border: rgba(127, 29, 58, 0.18);
+        --text: #2a181d;
+        --text-muted: #644b52;
+        --accent: #7f1d3a;
+        --accent-2: #9a6b2f;
+        --shadow: 0 10px 30px rgba(127, 29, 58, 0.10);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+      background: var(--bg-grad); background-attachment: fixed; color: var(--text);
+      line-height: 1.75; padding: 24px 16px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .hero { position: relative; text-align: center; margin-bottom: 32px; }
+    .feature-img {
+      width: 100%; max-height: 360px; object-fit: cover; border-radius: 24px;
+      border: 1px solid var(--card-border); box-shadow: var(--shadow);
+    }
+    .floating-logo {
+      width: 96px; height: 96px; border-radius: 24px; margin: -48px auto 14px;
+      display: block; border: 3px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(245, 208, 97, 0.30);
+      background: #1a0b12; position: relative; z-index: 2;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .subtitle { color: var(--accent); font-weight: 700; font-size: 15px; font-family: sans-serif; }
+    .badge-row {
+      display: inline-block; margin-top: 10px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(245, 208, 97, 0.14); border: 1px solid var(--card-border);
+      font-size: 12.5px; font-weight: 600; color: var(--accent); font-family: sans-serif;
+    }
+    .glass-card {
+      background: var(--card-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--card-border); border-radius: 22px; padding: 24px;
+      margin-bottom: 18px; box-shadow: var(--shadow); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    h2 { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+    p, li { font-size: 14.5px; color: var(--text); }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    .footer {
+      text-align: center; margin-top: 28px; padding: 20px; border-radius: 20px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      font-size: 13.5px; color: var(--text-muted); font-family: sans-serif;
+    }
+    .footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <img src="feature_graphic.png" alt="KalamClassic Reader Banner" class="feature-img">
+      <img src="icon_512.png" alt="KalamClassic Reader Icon" class="floating-logo">
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">KalamClassic Reader (com.articode.app.kalamclassicreader)</div>
+      <div class="badge-row">100% Offline • Complete Handbook • Zero Permissions</div>
+    </div>
+
+    <div class="glass-card">
+      <h2>1. Zero Data Collection</h2>
+      <p>KalamClassic Reader collects zero personal data, search queries, reading habits, crash analytics, or device identifiers. We never collect, sell, or share any information about you or what poetry selections you read.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>2. Zero Permissions</h2>
+      <p>KalamClassic Reader requests zero dangerous or runtime Android permissions:</p>
+      <ul>
+        <li>No access to Storage, Camera, Microphone, Contacts, Phone State, or Location.</li>
+        <li>No internet connection, background syncing, third-party ad networks, or behavioral telemetry.</li>
+      </ul>
+    </div>
+
+    <div class="glass-card">
+      <h2>3. 100% Client-Side Offline Utility</h2>
+      <p>All classical poetry texts, translations, and literary notes are bundled locally inside the app package with zero external network dependency. Your saved bookmarks, font size, serif/sans choice, and Light/Sepia/Dark theme remain locally in private Android SharedPreferences and erase on uninstall.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>4. Age Rating &amp; Policy</h2>
+      <p>KalamClassic Reader is designed for general literature audiences (13+ / 18+), collects zero data from any user regardless of age, and complies cleanly with COPPA and international privacy standards.</p>
+    </div>
+
+    <div class="footer">
+      Effective Date: November 10, 2026<br>
+      Developer Contact: <a href="mailto:altafmalikryk@gmail.com">altafmalikryk@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
