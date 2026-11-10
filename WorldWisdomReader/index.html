@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - WorldWisdom Reader</title>
+  <style>
+    :root {
+      --bg-grad: linear-gradient(135deg, #0b091e 0%, #1e1b4b 55%, #312e81 100%);
+      --card-bg: rgba(20, 18, 52, 0.76);
+      --card-border: rgba(252, 211, 77, 0.25);
+      --text: #f8fafc;
+      --text-muted: #c7d2fe;
+      --accent: #fcd34d;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.48);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-grad: linear-gradient(135deg, #fdf6e9 0%, #eef2ff 100%);
+        --card-bg: rgba(255, 255, 255, 0.88);
+        --card-border: rgba(67, 56, 202, 0.18);
+        --text: #1e1b4b;
+        --text-muted: #4f46e5;
+        --accent: #4338ca;
+        --shadow: 0 10px 30px rgba(67, 56, 202, 0.10);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
+      background: var(--bg-grad); background-attachment: fixed; color: var(--text);
+      line-height: 1.75; padding: 24px 16px 48px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    .hero { position: relative; text-align: center; margin-bottom: 32px; }
+    .feature-img {
+      width: 100%; max-height: 360px; object-fit: cover; border-radius: 24px;
+      border: 1px solid var(--card-border); box-shadow: var(--shadow);
+    }
+    .floating-logo {
+      width: 96px; height: 96px; border-radius: 24px; margin: -48px auto 14px;
+      display: block; border: 3px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(252, 211, 77, 0.30);
+      background: #1e1b4b; position: relative; z-index: 2;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .subtitle { color: var(--accent); font-weight: 700; font-size: 15px; font-family: sans-serif; }
+    .badge-row {
+      display: inline-block; margin-top: 10px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(252, 211, 77, 0.14); border: 1px solid var(--card-border);
+      font-size: 12.5px; font-weight: 600; color: var(--accent); font-family: sans-serif;
+    }
+    .glass-card {
+      background: var(--card-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--card-border); border-radius: 22px; padding: 24px;
+      margin-bottom: 18px; box-shadow: var(--shadow); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    h2 { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+    p, li { font-size: 14.5px; color: var(--text); }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    .footer {
+      text-align: center; margin-top: 28px; padding: 20px; border-radius: 20px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      font-size: 13.5px; color: var(--text-muted); font-family: sans-serif;
+    }
+    .footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <img src="feature_graphic.png" alt="WorldWisdom Reader Banner" class="feature-img">
+      <img src="icon_512.png" alt="WorldWisdom Reader Icon" class="floating-logo">
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">WorldWisdom Reader (com.articode.app.worldwisdomreader)</div>
+      <div class="badge-row">100% Offline • Complete Handbook • Zero Permissions</div>
+    </div>
+
+    <div class="glass-card">
+      <h2>1. Zero Data Collection</h2>
+      <p>WorldWisdom Reader collects zero personal data, search queries, saved bookmarks, analytics telemetry, crash logs, or device identifiers. Everything you read and save stays strictly private on your phone.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>2. Zero Permissions</h2>
+      <p>WorldWisdom Reader requests zero dangerous or runtime Android permissions:</p>
+      <ul>
+        <li>No access to Storage, Camera, Microphone, Contacts, Phone State, or Location.</li>
+        <li>No internet requests, background syncing, ad networks, or behavioral trackers.</li>
+      </ul>
+    </div>
+
+    <div class="glass-card">
+      <h2>3. 100% Client-Side Offline Utility</h2>
+      <p>Every proverb, native script passage, phonetic transliteration, English translation, and cultural context note runs offline directly from local app assets. Bookmarks and Light/Sepia/Dark preferences stay locally in Android SharedPreferences and wipe clean on uninstall.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>4. Age Rating &amp; Policy</h2>
+      <p>WorldWisdom Reader is designed for general literature and humanities audiences (13+ / 18+), collects zero data regardless of age, and meets COPPA and Google Play privacy policies cleanly.</p>
+    </div>
+
+    <div class="footer">
+      Effective Date: November 10, 2026<br>
+      Developer Contact: <a href="mailto:altafmalikryk@gmail.com">altafmalikryk@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
